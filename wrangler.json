@@ -2,8 +2,7 @@
     "name": "bip-omega-technical",
     "compatibility_date": "2025-12-23",
     "assets": {
-        "directory": "./dist",
-        "binding": "ASSETS"
+        "directory": "./dist"
     },
     "observability": {
         "enabled": true
