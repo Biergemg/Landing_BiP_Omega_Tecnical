@@ -11,7 +11,13 @@ import ContactForm from '../components/ContactForm.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="BiP Omega – Independent Technical Diagnostic & Risk Assurance">
+const seoDescription = "Independent technical diagnostic and risk assurance for energy infrastructure projects. Remote forensic analysis of public documents for investment committees, lenders, and insurers. Evidence-grade decision gating before capital deployment in BESS, solar PV, and wind energy projects.";
+---
+
+<Layout 
+	title="BiP Omega – Independent Technical Diagnostic & Risk Assurance"
+	description={seoDescription}
+>
 	<main>
 		<Hero />
 		<ProblemStatement />

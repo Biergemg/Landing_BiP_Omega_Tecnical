@@ -13,27 +13,104 @@ const { title, description = "Independent technical diagnostic, risk gating and 
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
 		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="keywords" content="technical due diligence, independent technical diagnostic, energy infrastructure risk assessment, BESS project analysis, renewable energy due diligence, pre-investment technical analysis, project risk gating, independent technical advisor, energy project validation, battery storage technical review, solar PV technical assessment, wind energy due diligence, investment committee technical reports, lender technical advisory, EPC contractor evaluation, technical risk identification, energy infrastructure consulting, independent engineer, technical feasibility analysis, project bankability assessment" />
+		<meta name="author" content="BiP Omega - Gustavo Bierge" />
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+		<meta name="googlebot" content="index, follow" />
+		<meta name="language" content="English" />
+		<meta name="revisit-after" content="7 days" />
+		<meta name="rating" content="general" />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://tecnical.biergemg.workers.dev/" />
+		
+		<!-- Favicon -->
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		
+		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+		
+		<!-- Generator -->
 		<meta name="generator" content={Astro.generator} />
 		
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://bipomega.com/" />
+		<meta property="og:url" content="https://tecnical.biergemg.workers.dev/" />
+		<meta property="og:site_name" content="BiP Omega" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:image" content="https://tecnical.biergemg.workers.dev/logo.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content="BiP Omega - Independent Technical Diagnostic & Risk Assurance" />
 
 		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://bipomega.com/" />
-		<meta property="twitter:title" content={title} />
-		<meta property="twitter:description" content={description} />
-
-		<title>{title}</title>
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://tecnical.biergemg.workers.dev/" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content="https://tecnical.biergemg.workers.dev/logo.png" />
+		<meta name="twitter:image:alt" content="BiP Omega - Independent Technical Diagnostic & Risk Assurance" />
+		<meta name="twitter:creator" content="@BiergeGustavo" />
+		
+		<!-- Structured Data (JSON-LD) -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "ProfessionalService",
+			"name": "BiP Omega",
+			"alternateName": "BiP Omega Technical Diagnostic",
+			"description": "Independent technical diagnostic, risk gating and pre-investment analysis for energy infrastructure and BESS projects. Evidence-grade decision support for investment committees and lenders.",
+			"url": "https://tecnical.biergemg.workers.dev/",
+			"logo": "https://tecnical.biergemg.workers.dev/logo.png",
+			"image": "https://tecnical.biergemg.workers.dev/logo.png",
+			"telephone": "",
+			"email": "gustavo.bierge@bipomega.com",
+			"address": {
+				"@type": "PostalAddress",
+				"addressCountry": "US"
+			},
+			"founder": {
+				"@type": "Person",
+				"name": "Gustavo Bierge",
+				"jobTitle": "Technical Lead",
+				"url": "https://www.linkedin.com/in/gustavo-bierge"
+			},
+			"areaServed": {
+				"@type": "Place",
+				"name": "Global"
+			},
+			"serviceType": [
+				"Technical Due Diligence",
+				"Independent Technical Diagnostic",
+				"Risk Assessment",
+				"Pre-Investment Analysis",
+				"Energy Infrastructure Consulting",
+				"BESS Project Analysis",
+				"Renewable Energy Due Diligence"
+			],
+			"priceRange": "$$$$",
+			"knowsAbout": [
+				"Energy Infrastructure",
+				"Battery Energy Storage Systems",
+				"Solar PV",
+				"Wind Energy",
+				"Technical Risk Assessment",
+				"Project Bankability",
+				"Independent Engineering"
+			],
+			"slogan": "Evidence-grade decision gating before capital deployment"
+		}
+		</script>
 	</head>
 	<body class="bg-white min-h-screen flex flex-col">
 		<slot />
