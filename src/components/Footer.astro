@@ -1,0 +1,29 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+  <div class="section-container">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="text-center md:text-left">
+        <!-- Logo made larger and fully visible -->
+        <img src="/logo.png" alt="BiP Omega" class="h-24 w-auto mb-6 mx-auto md:mx-0" />
+        <h3 class="text-xl font-bold text-white mb-2">BiP Omega</h3>
+        <p class="text-sm max-w-sm text-slate-500">
+          Independent Technical Diagnostic & Risk Assurance.<br/>
+          <span class="text-slate-600">Independent practice.</span>
+        </p>
+      </div>
+      
+      <div class="flex gap-8 text-sm font-medium">
+        <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="/terms" class="hover:text-white transition-colors">Terms of Service</a>
+      </div>
+    </div>
+    
+    <div class="mt-12 pt-8 border-t border-slate-800 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600">
+      <p>&copy; {year} BiP Omega. All rights reserved.</p>
+      <p>Gustavo Bierge - Technical Lead</p>
+    </div>
+  </div>
+</footer>
