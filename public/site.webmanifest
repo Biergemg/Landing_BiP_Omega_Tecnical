@@ -1,0 +1,23 @@
+{
+    "name": "BiP Omega",
+    "short_name": "BiP Omega",
+    "description": "Independent Technical Diagnostic & Risk Assurance for Energy Infrastructure",
+    "icons": [
+        {
+            "src": "/logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#0f172a",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/"
+}
