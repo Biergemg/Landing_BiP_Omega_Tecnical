@@ -28,7 +28,7 @@ const { title, description = "Independent technical diagnostic, risk gating and 
 		<meta name="rating" content="general" />
 		
 		<!-- Canonical URL -->
-		<link rel="canonical" href="https://tecnical.biergemg.workers.dev/" />
+		<link rel="canonical" href="https://bipomega.com/" />
 		
 		<!-- Favicon - Multiple formats for best compatibility -->
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -48,72 +48,147 @@ const { title, description = "Independent technical diagnostic, risk gating and 
 		
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://tecnical.biergemg.workers.dev/" />
+		<meta property="og:url" content="https://bipomega.com/" />
 		<meta property="og:site_name" content="BiP Omega" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:locale" content="en_US" />
-		<meta property="og:image" content="https://tecnical.biergemg.workers.dev/logo.png" />
+		<meta property="og:image" content="https://bipomega.com/logo.png" />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta property="og:image:alt" content="BiP Omega - Independent Technical Diagnostic & Risk Assurance" />
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:url" content="https://tecnical.biergemg.workers.dev/" />
+		<meta name="twitter:url" content="https://bipomega.com/" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content="https://tecnical.biergemg.workers.dev/logo.png" />
+		<meta name="twitter:image" content="https://bipomega.com/logo.png" />
 		<meta name="twitter:image:alt" content="BiP Omega - Independent Technical Diagnostic & Risk Assurance" />
 		<meta name="twitter:creator" content="@BiergeGustavo" />
 		
-		<!-- Structured Data (JSON-LD) -->
+		<!-- Elite Structured Data (JSON-LD) - Voice Search Optimized -->
+		<!-- Organization Schema with Brand Identity -->
 		<script type="application/ld+json" is:inline>
 		{
 			"@context": "https://schema.org",
-			"@type": "ProfessionalService",
+			"@type": "Organization",
+			"@id": "https://bipomega.com/#organization",
 			"name": "BiP Omega",
-			"alternateName": "BiP Omega Technical Diagnostic",
-			"description": "Independent technical diagnostic, risk gating and pre-investment analysis for energy infrastructure and BESS projects. Evidence-grade decision support for investment committees and lenders.",
-			"url": "https://tecnical.biergemg.workers.dev/",
-			"logo": "https://tecnical.biergemg.workers.dev/logo.png",
-			"image": "https://tecnical.biergemg.workers.dev/logo.png",
-			"telephone": "",
-			"email": "gustavo.bierge@bipomega.com",
-			"address": {
-				"@type": "PostalAddress",
-				"addressCountry": "US"
+			"legalName": "BiP Omega Technical Diagnostic",
+			"alternateName": ["BiP Omega", "BIP OMEGA", "BiP Ω"],
+			"url": "https://bipomega.com",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://bipomega.com/logo.png",
+				"width": 512,
+				"height": 512
 			},
+			"description": "Independent technical due diligence for investment decision gating. We identify fatal flaws in energy infrastructure projects before capital deployment using forensic analysis of public records.",
+			"slogan": "Evidence-grade decision gating before capital deployment",
+			"email": "gustavo.bierge@bipomega.com",
 			"founder": {
 				"@type": "Person",
+				"@id": "https://bipomega.com/#founder",
 				"name": "Gustavo Bierge",
-				"jobTitle": "Technical Lead",
-				"url": "https://www.linkedin.com/in/gustavo-bierge"
+				"jobTitle": "Technical Lead & Founder",
+				"sameAs": [
+					"https://www.linkedin.com/in/gustavo-bierge",
+					"https://twitter.com/BiergeGustavo"
+				]
 			},
+			"sameAs": [
+				"https://www.linkedin.com/in/gustavo-bierge"
+			],
+			"knowsAbout": [
+				"Technical Due Diligence",
+				"Investment Decision Gating",
+				"Battery Energy Storage Systems",
+				"BESS Risk Assessment",
+				"Energy Infrastructure",
+				"Independent Engineering",
+				"Forensic Technical Analysis",
+				"CEQA NEPA Analysis"
+			],
 			"areaServed": {
 				"@type": "Place",
 				"name": "Global"
 			},
-			"serviceType": [
-				"Technical Due Diligence",
-				"Independent Technical Diagnostic",
-				"Risk Assessment",
-				"Pre-Investment Analysis",
-				"Energy Infrastructure Consulting",
-				"BESS Project Analysis",
-				"Renewable Energy Due Diligence"
-			],
-			"priceRange": "$$$$",
-			"knowsAbout": [
-				"Energy Infrastructure",
-				"Battery Energy Storage Systems",
-				"Solar PV",
-				"Wind Energy",
-				"Technical Risk Assessment",
-				"Project Bankability",
-				"Independent Engineering"
-			],
-			"slogan": "Evidence-grade decision gating before capital deployment"
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Technical Due Diligence Services",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Phase 1 - Fatal Flaw Forensic Audit",
+							"description": "Binary Go/No-Go investment decision with quantified exposure. Delivered in 72 hours using only publicly available information.",
+							"serviceType": "Technical Due Diligence"
+						}
+					}
+				]
+			}
+		}
+		</script>
+
+		<!-- FAQPage Schema for Voice Search -->
+		<script type="application/ld+json" is:inline>
+		{
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			"mainEntity": [
+				{
+					"@type": "Question",
+					"name": "Why do standard technical due diligence reports miss fatal flaws?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Standard Independent Engineer reports validate compliance with provided documents but fail to question what is missing. They confirm that submitted data meets regulatory standards, but they don't interrogate strategic omissions. BiP Omega identifies Critical Silences - strategic data omissions that destroy deal economics or trigger insurance exclusions."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "What is a Critical Silence in technical due diligence?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "A Critical Silence is strategic data that should exist in public regulatory filings but is conspicuously absent. Examples include missing BMS thermal derating curves that prevent validation of summer revenue projections, absent UL9540A fire propagation data that triggers insurance exclusions, or undisclosed bridge load limits that cause MPT transport failures and 6-12 month construction delays."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "How does BiP Omega perform technical due diligence without site visits?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "BiP Omega performs forensic analysis of publicly available information including CEQA and NEPA filings, CAISO and ERCOT interconnection studies, NOAA climate data, county planning records, and BLM right-of-way databases. This Phase 1 Forensic Diagnostic identifies investment deal-breakers within 72 hours, before NDA signature, allowing investors to avoid sunk costs on fundamentally flawed projects."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Who uses BiP Omega's technical due diligence services?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "BiP Omega serves investment committees, infrastructure lenders, and risk insurers who need binary Go/No-Go decisions before capital deployment. Our methodology has been validated across 15+ utility-scale BESS projects representing 4.2 billion dollars in aggregate value, with an 89% validation rate where Phase 1 Critical Silences were later confirmed by tier-1 Independent Engineers during full due diligence."
+					}
+				}
+			]
+		}
+		</script>
+
+		<!-- Speakable Schema for Voice Assistants -->
+		<script type="application/ld+json" is:inline>
+		{
+			"@context": "https://schema.org",
+			"@type": "WebPage",
+			"@id": "https://bipomega.com/#webpage",
+			"url": "https://bipomega.com",
+			"name": "BiP Omega - Technical Due Diligence for Investment Decision Gating",
+			"speakable": {
+				"@type": "SpeakableSpecification",
+				"cssSelector": [".hero-headline", ".hero-subheadline"]
+			},
+			"mainEntity": {
+				"@id": "https://bipomega.com/#organization"
+			}
 		}
 		</script>
 	</head>
