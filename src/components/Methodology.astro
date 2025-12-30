@@ -27,31 +27,61 @@
         <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white"></div>
         <h3 class="text-xl font-bold text-slate-900 mb-2">2. Silence Identification & Classification</h3>
         <p class="text-slate-600 max-w-2xl mb-4">
-          All data points are rigidly classified to prevent scope creep and false confidence:
+          All data points are rigidly classified to prevent false confidence:
         </p>
-        <ul class="space-y-2 text-sm text-slate-600">
-          <li class="flex items-center gap-2">
-            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-            <strong>Verified:</strong> Confirmed by independent tangible evidence.
+        <ul class="space-y-4 text-sm text-slate-600 mb-6">
+          <li class="flex flex-col gap-1">
+            <div class="flex items-center gap-2 font-bold text-slate-900">
+               <span class="w-2 h-2 bg-green-500 rounded-full"></span> Verified:
+            </div>
+            <p class="pl-4 text-slate-500">Confirmed by independent tangible evidence (e.g., stamped engineering drawings, published interconnection study results).</p>
           </li>
-          <li class="flex items-center gap-2">
-            <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
-            <strong>Assumed:</strong> Based on standard industry practice but unverified.
+          <li class="flex flex-col gap-1">
+            <div class="flex items-center gap-2 font-bold text-slate-900">
+               <span class="w-2 h-2 bg-amber-500 rounded-full"></span> Assumed:
+            </div>
+            <p class="pl-4 text-slate-500">Based on industry standard practice but unverified by project-specific documentation. Flagged explicitly as risk.</p>
           </li>
-          <li class="flex items-center gap-2">
-            <span class="w-2 h-2 bg-red-500 rounded-full"></span>
-            <strong>Unknown/Silence:</strong> Critical data that should exist but is absent.
+          <li class="flex flex-col gap-1">
+            <div class="flex items-center gap-2 font-bold text-red-600">
+               <span class="w-2 h-2 bg-red-500 rounded-full"></span> Critical Silence:
+            </div>
+            <p class="pl-4 text-slate-500">Strategic data omissions that destroy deal economics or trigger insurance exclusions.</p>
           </li>
         </ul>
+        
+        <div class="bg-slate-50 p-4 rounded-sm border border-slate-100 mb-4">
+             <p class="font-bold text-slate-900 text-sm mb-2">Examples of Critical Silences:</p>
+             <ul class="list-disc list-inside text-sm text-slate-600 space-y-1">
+                <li>Missing BMS thermal derating curves → Cannot validate summer revenue projections</li>
+                <li>Absent UL9540A fire propagation data → Insurance exclusion or 200-400% premium increase</li>
+                <li>Undisclosed bridge load limits → MPT transport failure, 6-12 month construction delay</li>
+                <li>No BLM NEPA timeline → Federal permitting adds 12-24 months to critical path</li>
+             </ul>
+        </div>
       </div>
 
       <div class="relative pl-8 lg:pl-12">
         <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white"></div>
         <h3 class="text-xl font-bold text-slate-900 mb-2">3. Decision Gating</h3>
-        <p class="text-slate-600 max-w-2xl">
+        <p class="text-slate-600 max-w-2xl mb-4">
           The result is a binary technical recommendation: <strong>Proceed to Due Diligence</strong> or <strong>Halt for Critical Clarification</strong>.
-          Ambiguity is removed to protect the deployment committee.
         </p>
+        
+        <div class="bg-slate-50 border-l-4 border-slate-900 p-4">
+             <p class="font-bold text-slate-900 mb-2">This is decision-blocking analysis, not certification.</p>
+             <p class="text-slate-600 text-sm mb-4">
+                The output is binary: Proceed to Phase 2 Due Diligence OR Halt for Critical Data Disclosure.
+             </p>
+             <p class="text-slate-600 text-sm">
+                If public records reveal deal-breaking silences, you avoid sunk costs of:
+             </p>
+             <ul class="list-disc list-inside text-sm text-slate-600 mt-2 space-y-1">
+                <li>$50-150K traditional IE site visits</li>
+                <li>Legal fees for NDA and LOI negotiation</li>
+                <li>6-12 weeks of due diligence on fundamentally flawed projects</li>
+             </ul>
+        </div>
       </div>
     </div>
   </div>

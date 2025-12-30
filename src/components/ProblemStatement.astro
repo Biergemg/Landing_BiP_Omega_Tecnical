@@ -3,29 +3,84 @@
 
 <section class="bg-white py-12 lg:py-24">
   <div class="section-container">
-    <div class="max-w-3xl mx-auto">
+    <div class="max-w-4xl mx-auto mb-16">
       <h2 class="text-3xl font-bold text-slate-900 mb-8 leading-tight">
-Why Standard Analysis Fails</h2>
-      <p class="text-lg text-slate-600 leading-relaxed">
-        Traditional due diligence often relies on checklist validation rather than active risk interrogation. 
-        BiP Omega focuses on detecting technical silences and gaps in public data that signal deeper execution risks.
+        Why Standard IE Reports Miss Fatal Flaws
+      </h2>
+      <p class="text-lg text-slate-600 leading-relaxed mb-8">
+        Traditional Independent Engineers validate what developers provide — but fail to interrogate what's intentionally omitted.
       </p>
+
+      <div class="bg-slate-50 p-6 lg:p-8 rounded-sm border border-slate-200 text-sm">
+        <p class="font-bold text-slate-900 mb-4 text-base">Real Example: A 400 MW BESS in Imperial County had:</p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-center gap-3"><span class="text-green-600 font-bold text-lg">✓</span> <span class="text-slate-700">CEQA environmental approval</span></li>
+          <li class="flex items-center gap-3"><span class="text-green-600 font-bold text-lg">✓</span> <span class="text-slate-700">Signed utility PPA</span></li>
+          <li class="flex items-center gap-3"><span class="text-green-600 font-bold text-lg">✓</span> <span class="text-slate-700">$150K tier-1 IE validation report</span></li>
+        </ul>
+        
+        <p class="font-bold text-slate-900 mb-4 text-base">But the IE never asked:</p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-center gap-3"><span class="text-red-500 font-bold text-lg">✗</span> <span class="text-slate-700">Thermal derating curves at 46°C ambient temperature</span></li>
+          <li class="flex items-center gap-3"><span class="text-red-500 font-bold text-lg">✗</span> <span class="text-slate-700">Bridge structural capacity over irrigation canal (150+ ton MPT loads)</span></li>
+          <li class="flex items-center gap-3"><span class="text-red-500 font-bold text-lg">✗</span> <span class="text-slate-700">UL9540A fire propagation test results</span></li>
+          <li class="flex items-center gap-3"><span class="text-red-500 font-bold text-lg">✗</span> <span class="text-slate-700">BLM federal permitting timeline for gen-tie right-of-way (NEPA)</span></li>
+        </ul>
+
+        <div class="bg-red-50 p-4 border-l-4 border-red-500 mb-4">
+          <p class="font-bold text-red-900">Result: 18-month schedule slip. $23M+ in unbudgeted cost exposure.</p>
+        </div>
+        
+        <p class="text-slate-700 font-medium">
+           Phase 1 Forensic Diagnostic flags these gaps in 72 hours — using only public documents.
+        </p>
+        <p class="mt-4 text-xs text-slate-400 italic border-t border-slate-200 pt-2">
+           Project details anonymized. Analysis based exclusively on public records.
+        </p>
+      </div>
     </div>
 
     <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
       <div class="bg-white p-8 rounded-sm shadow-sm border border-slate-100">
         <h3 class="text-xl font-bold text-slate-900 mb-4">The Compliance Trap</h3>
-        <p class="text-slate-600">
-          Most technical reports confirm compliance with provided documents but fail to question what is missing. 
-          The diagnostic identifies the "unknown unknowns" that threaten project bankability.
+        <p class="text-slate-600 leading-relaxed">
+          Most technical reports confirm compliance with provided documents but never question what is strategically absent. Our diagnostic identifies "Critical Silences" — data omissions that silently destroy IRR and invalidate insurance coverage.
         </p>
       </div>
       <div class="bg-white p-8 rounded-sm shadow-sm border border-slate-100">
         <h3 class="text-xl font-bold text-slate-900 mb-4">Evidence-Based Gating</h3>
-        <p class="text-slate-600">
-          This analysis moves beyond "red flag" reporting to definitive decision gating. 
-          Diagnostics distinguish between verified facts, assumed data, and critical silences.
+        <p class="text-slate-600 mb-6">
+          This analysis moves beyond "red flag" reporting to definitive decision gating. All findings are rigidly classified:
         </p>
+        <ul class="space-y-3 text-sm text-slate-600 mb-8">
+           <li class="flex gap-3">
+             <span class="font-bold text-slate-900 min-w-[100px]">Verified:</span> 
+             <span>Confirmed by independent tangible evidence</span>
+           </li>
+           <li class="flex gap-3">
+             <span class="font-bold text-slate-900 min-w-[100px]">Assumed:</span> 
+             <span>Industry-standard inference (flagged as unverified)</span>
+           </li>
+           <li class="flex gap-3">
+             <span class="font-bold text-red-600 min-w-[100px]">Critical Silence:</span> 
+             <span>Strategic omissions signaling execution failure or insurance exclusion</span>
+           </li>
+        </ul>
+        
+        <div class="bg-slate-50 p-5 rounded-sm text-sm">
+            <p class="font-bold text-slate-900 mb-3 border-b border-slate-200 pb-2">Example Critical Silence:</p>
+            <p class="text-slate-600 mb-4">Developer declares "400 MW BESS" but omits Energy capacity (MWh), BMS thermal curves, and Warranty throughput limits.</p>
+            
+            <p class="font-bold text-red-600 mb-2">Financial Impact:</p>
+            <div class="space-y-1 text-slate-700">
+              <p><span class="font-semibold">Model assumes:</span> 4-hour duration at full power</p>
+              <p><span class="font-semibold">Reality:</span> 2.8-hour effective duration (thermal derating)</p>
+              <div class="mt-2 pt-2 border-t border-slate-200 font-bold text-red-600">
+                <p>Revenue shortfall: $4.2M annually</p>
+                <p>DSCR breach: Year 3</p>
+              </div>
+            </div>
+        </div>
       </div>
     </div>
   </div>
