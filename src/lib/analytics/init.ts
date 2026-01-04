@@ -17,34 +17,42 @@ declare global {
 export const initAnalytics = () => {
     if (typeof window === 'undefined') return;
 
-    // 1. Bootstrap GA4 (Logic only, script is in HEAD)
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function () { window.dataLayer.push(arguments); }
-    window.gtag('js', new Date());
-    window.gtag('config', GA4_MEASUREMENT_ID, {
-        anonymize_ip: true,
-        send_page_view: false // We control page views ideally, or let default happen? Default usually fine for SPA/Astro
-    });
+    try {
+        console.log('[Analytics] Bootstrapping...');
 
-    // 2. Initialize Web Vitals
-    initWebVitals();
+        // 1. Bootstrap GA4 (Logic only, script is in HEAD)
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); }
+        window.gtag('js', new Date());
+        window.gtag('config', GA4_MEASUREMENT_ID, {
+            anonymize_ip: true,
+            send_page_view: false
+        });
 
-    // 3. Initialize Custom Events (Scroll, PDF, etc.)
-    initCustomEvents();
+        // 2. Initialize Web Vitals
+        initWebVitals();
 
-    // 4. Enrich Visitor Profile & Send Page View (Enhanced)
-    const visitorProfile = enrichVisitor();
+        // 3. Initialize Custom Events (Scroll, PDF, etc.)
+        initCustomEvents();
 
-    // Explicit Page View with enriched data
-    sendEvent('page_view', {
-        ...visitorProfile,
-        page_title: document.title,
-        page_location: window.location.href,
-        page_path: window.location.pathname
-    });
+        // 4. Enrich Visitor Profile & Send Page View (Enhanced)
+        const visitorProfile = enrichVisitor();
 
-    // 5. Expose audit function to window
-    window.__analyticsAudit = runAudit;
+        // Explicit Page View with enriched data
+        const pageViewData = {
+            ...visitorProfile,
+            page_title: document.title,
+            page_location: window.location.href,
+            page_path: window.location.pathname
+        };
 
-    console.log('[Analytics] Initialized', visitorProfile);
+        sendEvent('page_view', pageViewData);
+
+        // 5. Expose audit function to window
+        window.__analyticsAudit = runAudit;
+
+        console.log('[Analytics] Initialized successfully', visitorProfile);
+    } catch (e) {
+        console.error('[Analytics] Initialization failed', e);
+    }
 };
