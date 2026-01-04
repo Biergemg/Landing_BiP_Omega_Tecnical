@@ -51,9 +51,23 @@ const { title, description = "Independent technical diagnostic, risk gating and 
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 		
+
 		<!-- Generator -->
 		<meta name="generator" content={Astro.generator} />
 		
+		<!-- Analytics & Observability -->
+		<!-- GA4 Script (Async Load) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-KRV707DJ7F"></script>
+		
+		<!-- Analytics Initialization (Core + Web Vitals + Custom Events) -->
+		<script>
+			import { initAnalytics } from '../lib/analytics/init';
+			// Initialize analytics on client load
+			initAnalytics();
+			
+			// Clarity Placeholder (TODO: Add ID)
+			console.log("Analytics initialized. Clarity pending ID.");
+		</script>
 		<!-- Open Graph / Facebook (Optimized for LinkedIn shares) -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://bipomega.com/" />
