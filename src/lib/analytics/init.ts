@@ -3,12 +3,14 @@ import { initWebVitals } from './performance/webVitals';
 import { initCustomEvents } from './events/customEvents';
 import { enrichVisitor } from './enrichment/enrichVisitor';
 import { sendEvent } from './proxy/sendEvent';
+import { runAudit } from './validation/audit';
 
 // Add type definition for global Window extensions if not already present
 declare global {
     interface Window {
         dataLayer: any[];
         gtag: (...args: any[]) => void;
+        __analyticsAudit: () => void;
     }
 }
 
@@ -40,6 +42,9 @@ export const initAnalytics = () => {
         page_location: window.location.href,
         page_path: window.location.pathname
     });
+
+    // 5. Expose audit function to window
+    window.__analyticsAudit = runAudit;
 
     console.log('[Analytics] Initialized', visitorProfile);
 };
