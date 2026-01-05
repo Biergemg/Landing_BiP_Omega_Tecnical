@@ -61,12 +61,11 @@ export function enrichVisitor(): VisitorProfile {
     };
 }
 
-export function updateVisitorProfile(updates: Partial<VisitorProfile>) {
+export function updateVisitorProfile() {
     const now = Date.now();
     
     // Throttling: evitar actualizaciones muy frecuentes
     if (now - lastUpdate < THROTTLE_DELAY) {
-        console.log('[Analytics] Update throttled - too frequent');
         return;
     }
     
@@ -75,18 +74,16 @@ export function updateVisitorProfile(updates: Partial<VisitorProfile>) {
     try {
         // Solo actualizar si estamos en el navegador
         if (typeof window === 'undefined') {
-            console.warn('[Analytics] Cannot update profile on server side');
             return;
         }
         
         // Aquí puedes agregar lógica para actualizar el perfil
         // Por ejemplo, enviar a analytics o actualizar storage
-        console.log('[Analytics] Updating visitor profile:', updates);
         
         // Ejemplo: actualizar timestamp en sessionStorage
         sessionStorage.setItem('lastProfileUpdate', now.toString());
         
-    } catch (error) {
-        console.error('[Analytics] Error updating visitor profile:', error);
+    } catch {
+        // Fail silently for analytics
     }
 }

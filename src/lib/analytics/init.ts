@@ -14,8 +14,6 @@ export function initAnalytics(): void {
     if (typeof window === 'undefined') return;
 
     try {
-        console.log('[Analytics] Bootstrapping...');
-
         // 1. Bootstrap GA4 (Logic only, script is in HEAD)
         window.dataLayer = window.dataLayer || [];
         window.gtag = function (...args: unknown[]) { 
@@ -48,9 +46,7 @@ export function initAnalytics(): void {
 
         // 5. Expose audit function to window
         // window.__analyticsAudit = runAudit; // TODO: Implementar cuando se migre el módulo
-
-        console.log('[Analytics] Initialized successfully', visitorProfile);
-    } catch (error) {
-        console.error('[Analytics] Initialization failed', error);
+    } catch {
+        // Fail silently for analytics
     }
 }
