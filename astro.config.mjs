@@ -10,10 +10,16 @@ export default defineConfig({
     sentry({
       project: "javascript-astro",
       org: "bip-omega",
-      dsn: "https://d16b2e65cc81cfad1de678dd48938797@o4510650633027584.ingest.us.sentry.io/4510650642399232",
+      dsn: import.meta.env.PUBLIC_SENTRY_DSN || process.env.PUBLIC_SENTRY_DSN,
       sourceMapsUploadOptions: {
         enabled: true,
       },
+      clientInitOptions: {
+        sendDefaultPii: false, // STRICTLY DISABLED for privacy compliance
+      },
+      serverInitOptions: {
+        sendDefaultPii: false, 
+      }
     })
   ],
   output: 'static',
