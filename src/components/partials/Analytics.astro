@@ -1,0 +1,19 @@
+---
+---
+
+<!-- Google Analytics 4 -->
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-KRV707DJ7F"></script>
+<script>
+  import { initGtag } from '../../lib/analytics/gtag';
+  initGtag();
+</script>
+
+<!-- Analytics Initialization (Core + Web Vitals + Custom Events) -->
+<script>
+  import { initAnalytics } from '../../lib/analytics/init';
+  // Initialize analytics on client load
+  initAnalytics();
+  
+  // Clarity Placeholder (TODO: Add ID)
+  console.log("Analytics initialized. Clarity pending ID.");
+</script>

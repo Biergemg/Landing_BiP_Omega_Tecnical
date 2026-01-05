@@ -1,0 +1,120 @@
+---
+export interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+export interface BreadcrumbProps {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props as BreadcrumbProps;
+---
+
+<nav class="breadcrumb-container" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+    {items.map((item, index) => (
+      <li 
+        class="breadcrumb-item" 
+        itemprop="itemListElement" 
+        itemscope 
+        itemtype="https://schema.org/ListItem"
+      >
+        <a 
+          href={item.url} 
+          itemprop="item"
+          class={index === items.length - 1 ? "breadcrumb-link current" : "breadcrumb-link"}
+          aria-current={index === items.length - 1 ? "page" : undefined}
+        >
+          <span itemprop="name">{item.name}</span>
+        </a>
+        <meta itemprop="position" content={String(index + 1)} />
+        {index < items.length - 1 && (
+          <span class="breadcrumb-separator" aria-hidden="true">/</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .breadcrumb-container {
+    padding: 1rem 0;
+    background: transparent;
+  }
+
+  .breadcrumb-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .breadcrumb-link {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .breadcrumb-link:hover {
+    color: #0f172a;
+    text-decoration: underline;
+  }
+
+  .breadcrumb-link.current {
+    color: #0f172a;
+    font-weight: 600;
+    pointer-events: none;
+  }
+
+  .breadcrumb-separator {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    margin: 0 0.25rem;
+  }
+
+  /* Responsive design */
+  @media (max-width: 640px) {
+    .breadcrumb-container {
+      padding: 0.75rem 0;
+    }
+
+    .breadcrumb-list {
+      font-size: 0.8125rem;
+    }
+
+    .breadcrumb-link {
+      font-size: 0.8125rem;
+    }
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .breadcrumb-link {
+      color: #94a3b8;
+    }
+
+    .breadcrumb-link:hover {
+      color: #f8fafc;
+    }
+
+    .breadcrumb-link.current {
+      color: #f8fafc;
+    }
+
+    .breadcrumb-separator {
+      color: #64748b;
+    }
+  }
+</style>

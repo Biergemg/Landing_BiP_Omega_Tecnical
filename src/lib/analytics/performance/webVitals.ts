@@ -1,10 +1,16 @@
 import { onCLS, onINP, onLCP } from 'web-vitals';
 import { sendEvent } from '../proxy/sendEvent';
 
+interface WebVitalsMetric {
+    name: string;
+    delta: number;
+    id: string;
+}
+
 export const initWebVitals = () => {
     if (typeof window === 'undefined') return;
 
-    const sendToAnalytics = ({ name, delta, id }: any) => {
+    const sendToAnalytics = ({ name, delta, id }: WebVitalsMetric) => {
         // Assumes a custom compatible event or mapping in GA4
         sendEvent('web_vitals', {
             event_category: 'Web Vitals',
@@ -14,6 +20,7 @@ export const initWebVitals = () => {
         });
     };
 
+    // Listen for web vitals
     onCLS(sendToAnalytics);
     onINP(sendToAnalytics);
     onLCP(sendToAnalytics);

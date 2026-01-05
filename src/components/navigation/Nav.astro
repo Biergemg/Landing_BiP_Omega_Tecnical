@@ -1,0 +1,200 @@
+---
+// Basic navigation component for testing
+---
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <a href="/" class="brand-link">
+        <span class="brand-text">BiP Omega</span>
+      </a>
+    </div>
+    
+    <div class="nav-menu" id="nav-menu">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="/" class="nav-link" aria-current={Astro.url.pathname === '/' ? 'page' : undefined}>
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/about" class="nav-link" aria-current={Astro.url.pathname === '/about' ? 'page' : undefined}>
+            About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact" class="nav-link" aria-current={Astro.url.pathname === '/contact' ? 'page' : undefined}>
+            Contact
+          </a>
+        </li>
+      </ul>
+      
+      <div class="nav-actions">
+        <!-- Language selector will be added here -->
+      </div>
+    </div>
+    
+    <button 
+      class="nav-toggle" 
+      aria-label="Toggle navigation" 
+      aria-expanded="false" 
+      aria-controls="nav-menu"
+    >
+      <span class="nav-toggle-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1rem 0;
+  }
+  
+  .nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .nav-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1d4ed8;
+  }
+  
+  .brand-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    color: #1d4ed8;
+  }
+  
+  .nav-link[aria-current="page"] {
+    color: #1d4ed8;
+    font-weight: 600;
+  }
+  
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .nav-toggle-icon {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #475569;
+    position: relative;
+    transition: background 0.2s ease;
+  }
+  
+  .nav-toggle-icon::before,
+  .nav-toggle-icon::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: #475569;
+    transition: transform 0.2s ease;
+  }
+  
+  .nav-toggle-icon::before {
+    top: -8px;
+  }
+  
+  .nav-toggle-icon::after {
+    top: 8px;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: 100vh;
+      background: white;
+      flex-direction: column;
+      padding: 2rem;
+      transition: right 0.3s ease;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+    
+    .nav-menu.active {
+      right: 0;
+    }
+    
+    .nav-list {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .nav-toggle {
+      display: block;
+    }
+    
+    .nav-toggle[aria-expanded="true"] .nav-toggle-icon {
+      background: transparent;
+    }
+    
+    .nav-toggle[aria-expanded="true"] .nav-toggle-icon::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+    
+    .nav-toggle[aria-expanded="true"] .nav-toggle-icon::after {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+  }
+</style>
+
+<script>
+  // Mobile navigation toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
+        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!isExpanded));
+        navMenu.classList.toggle('active');
+      });
+    }
+  });
+</script>

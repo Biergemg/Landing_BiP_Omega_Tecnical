@@ -1,0 +1,346 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e5]:
+      - img "BiP Omega" [ref=e6]
+      - heading "Technical Due Diligence for Investment Decision Gating" [level=1] [ref=e7]
+      - paragraph [ref=e8]:
+        - text: Identify the $9.5–23M in potential unquantified risks hiding in public CEQA/NEPA filings — before due diligence starts.
+        - text: No site visits. No NDA required. Only public-record forensics.
+      - link "Request Initial Scope" [ref=e10] [cursor=pointer]:
+        - /url: "#contact"
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - heading "Why Standard IE Reports Miss Fatal Flaws" [level=2] [ref=e15]
+        - paragraph [ref=e16]: Traditional Independent Engineers validate what developers provide — but fail to interrogate what's intentionally omitted.
+        - generic [ref=e17]:
+          - paragraph [ref=e18]: "Real Example: A 400 MW BESS in Imperial County had:"
+          - list [ref=e19]:
+            - listitem [ref=e20]:
+              - generic [ref=e21]: ✓
+              - generic [ref=e22]: CEQA environmental approval
+            - listitem [ref=e23]:
+              - generic [ref=e24]: ✓
+              - generic [ref=e25]: Signed utility PPA
+            - listitem [ref=e26]:
+              - generic [ref=e27]: ✓
+              - generic [ref=e28]: $150K tier-1 IE validation report
+          - paragraph [ref=e29]: "But the IE never asked:"
+          - list [ref=e30]:
+            - listitem [ref=e31]:
+              - generic [ref=e32]: ✗
+              - generic [ref=e33]: Thermal derating curves at 46°C ambient temperature
+            - listitem [ref=e34]:
+              - generic [ref=e35]: ✗
+              - generic [ref=e36]: Bridge structural capacity over irrigation canal (150+ ton MPT loads)
+            - listitem [ref=e37]:
+              - generic [ref=e38]: ✗
+              - generic [ref=e39]: UL9540A fire propagation test results
+            - listitem [ref=e40]:
+              - generic [ref=e41]: ✗
+              - generic [ref=e42]: BLM federal permitting timeline for gen-tie right-of-way (NEPA)
+          - paragraph [ref=e44]: "Result: 18-month schedule slip. $23M+ in unbudgeted cost exposure."
+          - paragraph [ref=e45]: Phase 1 Forensic Diagnostic flags these gaps in 72 hours — using only public documents.
+          - paragraph [ref=e46]: Project details anonymized. Analysis based exclusively on public records.
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - heading "The Compliance Trap" [level=3] [ref=e49]
+          - paragraph [ref=e50]: Most technical reports confirm compliance with provided documents but never question what is strategically absent. Our diagnostic identifies "Critical Silences" — data omissions that silently destroy IRR and invalidate insurance coverage.
+        - generic [ref=e51]:
+          - heading "Evidence-Based Gating" [level=3] [ref=e52]
+          - paragraph [ref=e53]: "This analysis moves beyond \"red flag\" reporting to definitive decision gating. All findings are rigidly classified:"
+          - list [ref=e54]:
+            - listitem [ref=e55]:
+              - generic [ref=e56]: "Verified:"
+              - generic [ref=e57]: Confirmed by independent tangible evidence
+            - listitem [ref=e58]:
+              - generic [ref=e59]: "Assumed:"
+              - generic [ref=e60]: Industry-standard inference (flagged as unverified)
+            - listitem [ref=e61]:
+              - generic [ref=e62]: "Critical Silence:"
+              - generic [ref=e63]: Strategic omissions signaling execution failure or insurance exclusion
+          - generic [ref=e64]:
+            - paragraph [ref=e65]: "Example Critical Silence:"
+            - paragraph [ref=e66]: Developer declares "400 MW BESS" but omits Energy capacity (MWh), BMS thermal curves, and Warranty throughput limits.
+            - paragraph [ref=e67]: "Financial Impact:"
+            - generic [ref=e68]:
+              - paragraph [ref=e69]: "Model assumes: 4-hour duration at full power"
+              - paragraph [ref=e70]: "Reality: 2.8-hour effective duration (thermal derating)"
+              - generic [ref=e71]:
+                - paragraph [ref=e72]: "Revenue shortfall: $4.2M annually"
+                - paragraph [ref=e73]: "DSCR breach: Year 3"
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - generic [ref=e78]: Phase 1
+        - heading "Phase 1 – Fatal Flaw Forensic Audit (No NDA Required)" [level=3] [ref=e79]:
+          - text: Phase 1 – Fatal Flaw Forensic Audit
+          - generic [ref=e80]: (No NDA Required)
+        - paragraph [ref=e81]:
+          - text: "Strictly non-intrusive documentary analysis based solely on publicly available information: CEQA/NEPA filings, CAISO/ERCOT interconnection studies, NOAA climate data, county planning records, BLM right-of-way databases."
+          - text: All work is remote. Value delivered via technical report.
+        - list [ref=e82]:
+          - listitem [ref=e83]:
+            - generic [ref=e84]: →
+            - text: Binary Go/No-Go investment decision with quantified exposure
+          - listitem [ref=e85]:
+            - generic [ref=e86]: →
+            - text: Identification of execution blockers and insurance deal-breakers
+          - listitem [ref=e87]:
+            - generic [ref=e88]: →
+            - text: Critical Silence detection (thermal, structural, regulatory, fire safety)
+          - listitem [ref=e89]:
+            - generic [ref=e90]: →
+            - text: Delivered in 72 hours — no site visits, no developer coordination
+      - generic [ref=e91]:
+        - generic [ref=e92]: Phase 2
+        - heading "Deep Analysis Proposal" [level=3] [ref=e93]
+        - paragraph [ref=e94]: Issuance of specific technical scope and quotation for deep-dive analysis defined by project findings.
+        - list [ref=e95]:
+          - listitem [ref=e96]:
+            - generic [ref=e97]: →
+            - text: Customized scope definition
+          - listitem [ref=e98]:
+            - generic [ref=e99]: →
+            - text: Specific evidence requests
+          - listitem [ref=e100]:
+            - generic [ref=e101]: →
+            - text: Execution requires separate mandate
+    - generic [ref=e103]:
+      - generic [ref=e104]:
+        - heading "Methodology" [level=2] [ref=e105]
+        - paragraph [ref=e106]:
+          - text: The process is designed for immediate clarity on project viability. It does not validate for the sake of completion; it gates for investment safety.
+          - strong [ref=e107]: This work is decision-blocking, not certification or compliance validation.
+      - generic [ref=e108]:
+        - generic [ref=e109]:
+          - heading "1. Public Data Risk Detection" [level=3] [ref=e111]
+          - paragraph [ref=e112]: "Initial diagnostic using solely public information: presentations CEQA/NEPA, reportes CAISO/ERCOT, data NOAA, corporate records. No data room access. No NDA. The project's technical footprint is mapped against proven failure modes."
+        - generic [ref=e113]:
+          - heading "2. Silence Identification & Classification" [level=3] [ref=e115]
+          - paragraph [ref=e116]: "All data points are rigidly classified to prevent false confidence:"
+          - list [ref=e117]:
+            - listitem [ref=e118]:
+              - generic [ref=e119]: "Verified:"
+              - paragraph [ref=e121]: Confirmed by independent tangible evidence (e.g., stamped engineering drawings, published interconnection study results).
+            - listitem [ref=e122]:
+              - generic [ref=e123]: "Assumed:"
+              - paragraph [ref=e125]: Based on industry standard practice but unverified by project-specific documentation. Flagged explicitly as risk.
+            - listitem [ref=e126]:
+              - generic [ref=e127]: "Critical Silence:"
+              - paragraph [ref=e129]: Strategic data omissions that destroy deal economics or trigger insurance exclusions.
+          - generic [ref=e130]:
+            - paragraph [ref=e131]: "Examples of Critical Silences:"
+            - list [ref=e132]:
+              - listitem [ref=e133]: Missing BMS thermal derating curves → Cannot validate summer revenue projections
+              - listitem [ref=e134]: Absent UL9540A fire propagation data → Insurance exclusion or 200-400% premium increase
+              - listitem [ref=e135]: Undisclosed bridge load limits → MPT transport failure, 6-12 month construction delay
+              - listitem [ref=e136]: No BLM NEPA timeline → Federal permitting adds 12-24 months to critical path
+        - generic [ref=e137]:
+          - heading "3. Decision Gating" [level=3] [ref=e139]
+          - paragraph [ref=e140]:
+            - text: "The result is a binary technical recommendation:"
+            - strong [ref=e141]: Proceed to Due Diligence
+            - text: or
+            - strong [ref=e142]: Halt for Critical Clarification
+            - text: .
+          - generic [ref=e143]:
+            - paragraph [ref=e144]: This is decision-blocking analysis, not certification.
+            - paragraph [ref=e145]: "The output is binary: Proceed to Phase 2 Due Diligence OR Halt for Critical Data Disclosure."
+            - paragraph [ref=e146]: "If public records reveal deal-breaking silences, you avoid sunk costs of:"
+            - list [ref=e147]:
+              - listitem [ref=e148]: $50-150K traditional IE site visits
+              - listitem [ref=e149]: Legal fees for NDA and LOI negotiation
+              - listitem [ref=e150]: 6-12 weeks of due diligence on fundamentally flawed projects
+    - generic [ref=e153]:
+      - generic [ref=e154]:
+        - heading "See the Methodology in Action" [level=2] [ref=e155]
+        - paragraph [ref=e156]: Download the sanitized forensic diagnostic extracting $9.5–23M in risks from public records.
+      - generic [ref=e157]:
+        - generic [ref=e158]:
+          - heading "Imperial Valley BESS Forensic Case Study (400 MW)" [level=3] [ref=e159]
+          - paragraph [ref=e160]: This sanitized report demonstrates how Phase 1 Forensic Diagnostic identified $9.5–23M in unquantified risks using only public CEQA filings and county planning records.
+          - generic [ref=e161]:
+            - list [ref=e162]:
+              - listitem [ref=e163]:
+                - generic [ref=e164]: ✓
+                - text: Evidence-Grade Parameter Register
+              - listitem [ref=e165]:
+                - generic [ref=e166]: ✓
+                - text: 6 Critical Silences detected (with financial quantification)
+              - listitem [ref=e167]:
+                - generic [ref=e168]: ✓
+                - text: Evidence-Based Risk Register
+            - list [ref=e169]:
+              - listitem [ref=e170]:
+                - generic [ref=e171]: ✓
+                - text: Binary Go/No-Go Decision Matrix
+              - listitem [ref=e172]:
+                - generic [ref=e173]: ✓
+                - text: 3-Level Diagnostic Maturity framework
+          - generic [ref=e174]:
+            - link "Download Forensic Case Study" [ref=e175] [cursor=pointer]:
+              - /url: /REPORT_PUBLIC_CASE_STUDY.pdf
+            - generic [ref=e176]: No email required - immediate PDF download
+        - generic [ref=e178]:
+          - generic [ref=e179]: 47+
+          - generic [ref=e180]: Investment professionals
+          - generic [ref=e181]: have downloaded this report
+    - generic [ref=e184]:
+      - heading "Why Gate 1 is Public Info & Remote Only" [level=3] [ref=e185]
+      - generic [ref=e186]:
+        - generic [ref=e187]:
+          - heading "Reason 1 - Independence" [level=4] [ref=e188]
+          - paragraph [ref=e189]: Site visits create implicit relationships with developers. The remote analysis maintains strict independence.
+        - generic [ref=e190]:
+          - heading "Reason 2 - Efficiency" [level=4] [ref=e191]
+          - paragraph [ref=e192]: Public filings contain 70-80% of critical risk indicators. Traveling to site before analyzing public data is wasteful.
+        - generic [ref=e193]:
+          - heading "Reason 3 - Decision Protection" [level=4] [ref=e194]
+          - paragraph [ref=e195]: If public data reveals deal-breaking silences, you avoid sunk costs of site visits, NDAs, and LOIs.
+    - generic [ref=e197]:
+      - paragraph [ref=e198]: Intended Users
+      - generic [ref=e199]:
+        - generic [ref=e200]: Investment Committees
+        - generic [ref=e201]: Infrastructure Lenders
+        - generic [ref=e202]: Risk Insurers
+      - generic [ref=e203]:
+        - heading "Methodology Validated By Project Outcomes" [level=3] [ref=e204]
+        - generic [ref=e205]:
+          - generic [ref=e206]:
+            - generic [ref=e207]: 15+
+            - generic [ref=e208]: Utility-scale BESS projects
+          - generic [ref=e209]:
+            - generic [ref=e210]: $4.2B
+            - generic [ref=e211]: Aggregate value assessed
+          - generic [ref=e212]:
+            - generic [ref=e213]: 89%
+            - generic [ref=e214]: Validation rate*
+          - generic [ref=e215]:
+            - generic [ref=e216]: "6"
+            - generic [ref=e217]: Regulatory Jurisdictions
+      - generic [ref=e218]:
+        - paragraph [ref=e219]: Note on Testimonials
+        - generic [ref=e220]:
+          - paragraph [ref=e221]: We don't publish client testimonials.
+          - paragraph [ref=e222]: Investment committees don't give public endorsements for services that expose deal-breaking flaws in their pipeline. Our clients value confidentiality over marketing.
+          - paragraph [ref=e223]: If that's a problem, we're not the right fit.
+    - generic [ref=e226]:
+      - heading "Formal Statement of Scope" [level=3] [ref=e227]
+      - generic [ref=e228]:
+        - generic [ref=e229]:
+          - heading "BiP Omega DOES NOT:" [level=4] [ref=e230]
+          - list [ref=e231]:
+            - listitem [ref=e232]:
+              - generic [ref=e233]: ×
+              - generic [ref=e234]: Act as operational advisor or execute project tasks.
+            - listitem [ref=e235]:
+              - generic [ref=e236]: ×
+              - generic [ref=e237]: Interact with third parties (EPCs, Suppliers, Authorities).
+            - listitem [ref=e238]:
+              - generic [ref=e239]: ×
+              - generic [ref=e240]: Certify contracts or validate compliance.
+            - listitem [ref=e241]:
+              - generic [ref=e242]: ×
+              - generic [ref=e243]: Guarantee bankability or financial returns.
+        - generic [ref=e244]:
+          - heading "BiP Omega DOES:" [level=4] [ref=e245]
+          - list [ref=e246]:
+            - listitem [ref=e247]:
+              - generic [ref=e248]: ✓
+              - generic [ref=e249]: Forensically analyzes public documents to detect technical silences.
+            - listitem [ref=e250]:
+              - generic [ref=e251]: ✓
+              - generic [ref=e252]: Identifies critical data gaps blocking investment decisions.
+            - listitem [ref=e253]:
+              - generic [ref=e254]: ✓
+              - generic [ref=e255]: Provides binary GO/NO-GO gating with quantified risk exposure.
+            - listitem [ref=e256]:
+              - generic [ref=e257]: ✓
+              - generic [ref=e258]: Operates 100% remotely for Gate 1 diagnostic.
+            - listitem [ref=e259]:
+              - generic [ref=e260]: ✓
+              - generic [ref=e261]: Delivers findings exclusively via written technical documentation.
+      - generic [ref=e262]:
+        - heading "Stop Wasting $50-150K on Site Visits for Fatally Flawed Projects" [level=4] [ref=e263]
+        - paragraph [ref=e264]:
+          - text: Traditional Independent Engineers conduct expensive site visits and data room reviews for projects with fatal flaws already visible in public records.
+          - text: Phase 1 Forensic Diagnostic identifies investment deal-breakers within 72 hours using only publicly available information.
+        - paragraph [ref=e265]: Gate 1 diagnostics are quoted after initial scope consultation.
+        - paragraph [ref=e266]:
+          - strong [ref=e267]: "Pricing factors:"
+          - text: public data availability, asset complexity (MW/MWh), regulatory jurisdiction (state/federal nexus).
+        - paragraph [ref=e268]: No hourly billing. No scope creep. Fixed-price proposal with binary deliverable.
+    - generic [ref=e271]:
+      - generic [ref=e272]:
+        - heading "Contact Technical Lead" [level=2] [ref=e273]
+        - paragraph [ref=e274]: Direct engagement for investment committees and technical leads. Responses typically within 24 hours.
+        - generic [ref=e276]:
+          - img [ref=e278]
+          - generic [ref=e280]:
+            - heading "Email" [level=4] [ref=e281]
+            - link "gustavo.bierge@bipomega.com" [ref=e282] [cursor=pointer]:
+              - /url: mailto:gustavo.bierge@bipomega.com
+      - generic [ref=e284]:
+        - generic [ref=e285]:
+          - generic [ref=e286]: Full Name *
+          - textbox "Full Name *" [ref=e287]
+        - generic [ref=e288]:
+          - generic [ref=e289]: Email Address *
+          - textbox "Email Address *" [ref=e290]
+        - generic [ref=e291]:
+          - generic [ref=e292]: Organization
+          - textbox "Organization" [ref=e293]
+        - generic [ref=e294]:
+          - generic [ref=e295]: Role *
+          - combobox "Role *" [ref=e296]:
+            - option "Select your role..." [disabled] [selected]
+            - option "Investment Committee Member / CIO"
+            - option "Lender / Debt Provider"
+            - option "Developer (seeking investment readiness audit)"
+            - option "Independent Engineer / Technical Advisor"
+            - option "Insurance / Risk Underwriter"
+            - option "Other"
+        - generic [ref=e297]:
+          - generic [ref=e298]: Current Project Stage *
+          - combobox "Current Project Stage *" [ref=e299]:
+            - option "Select project stage..." [disabled] [selected]
+            - option "Term Sheet / LOI negotiation (active)"
+            - option "Due diligence preparation"
+            - option "Pre-investment screening"
+            - option "Post-close technical validation"
+            - option "General inquiry"
+        - generic [ref=e300]:
+          - generic [ref=e301]: Message *
+          - textbox "Message *" [ref=e302]
+        - button "Request Forensic Diagnostic (Phase 1)" [ref=e303] [cursor=pointer]
+        - paragraph [ref=e304]: By submitting this form, you acknowledge that no continuous engagement is established until a mandate is signed.
+  - contentinfo [ref=e305]:
+    - generic [ref=e307]:
+      - generic [ref=e308]:
+        - heading "BiP Omega" [level=3] [ref=e309]
+        - paragraph [ref=e310]:
+          - text: Independent Technical Diagnostic & Risk Assurance.
+          - text: Independent practice.
+      - generic [ref=e311]:
+        - paragraph [ref=e312]: © 2026 BiP Omega. All rights reserved.
+        - generic [ref=e313]:
+          - link "Privacy Policy" [ref=e314] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms of Service" [ref=e315] [cursor=pointer]:
+            - /url: /terms
+  - generic [ref=e318]:
+    - button "Menu" [ref=e319]:
+      - img [ref=e321]
+      - generic: Menu
+    - button "Inspect" [ref=e325]:
+      - img [ref=e327]
+      - generic: Inspect
+    - button "Audit" [ref=e329]:
+      - img [ref=e331]
+      - generic: Audit
+    - button "Settings" [ref=e334]:
+      - img [ref=e336]
+      - generic: Settings
+```

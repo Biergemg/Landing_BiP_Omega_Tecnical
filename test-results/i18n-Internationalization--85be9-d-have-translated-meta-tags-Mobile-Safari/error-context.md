@@ -1,0 +1,49 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - heading "Due Diligence Forense para Proyectos BESS" [level=1] [ref=e5]
+      - paragraph [ref=e6]: Identifique riesgos no cuantificados de $9.5-23M ocultos en archivos públicos CEQA/NEPA antes de comenzar la due diligence. Sin visitas al sitio. No se requiere NDA.
+      - generic [ref=e7]:
+        - button "Iniciar Diagnóstico Fase 1" [ref=e8] [cursor=pointer]
+        - button "Ver Estudios de Caso" [ref=e9] [cursor=pointer]
+    - generic [ref=e11]:
+      - heading "El Problema del Silencio Crítico" [level=2] [ref=e12]
+      - heading "Los informes estándar del Ingeniero Independiente validan el cumplimiento con los documentos proporcionados pero fallan en cuestionar lo que falta." [level=3] [ref=e13]
+      - paragraph [ref=e14]: Confirman que los datos presentados cumplen con los estándares regulatorios, pero no interrogan las omisiones estratégicas. BiP Omega identifica Silencios Críticos - omisiones de datos estratégicos que destruyen la economía del negocio o activan exclusiones de seguros.
+    - generic [ref=e16]:
+      - heading "Nuestros Servicios" [level=2] [ref=e17]
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - heading "Fase 1 - Auditoría Forense de Fallas Fatales" [level=3] [ref=e20]
+          - paragraph [ref=e21]: Decisión de inversión binaria Go/No-Go con exposición cuantificada. Entregado en 72 horas usando solo información pública disponible.
+        - generic [ref=e22]:
+          - heading "Fase 2 - Validación Técnica Profunda" [level=3] [ref=e23]
+          - paragraph [ref=e24]: Validación técnica integral de riesgos identificados con análisis de ingeniería detallado y estrategias de mitigación.
+        - generic [ref=e25]:
+          - heading "Fase 3 - Soporte al Comité de Inversión" [level=3] [ref=e26]
+          - paragraph [ref=e27]: Soporte técnico para presentaciones al comité de inversión y servicios de asesoría técnica para prestamistas.
+    - generic [ref=e29]:
+      - heading "Contáctenos" [level=2] [ref=e30]
+      - paragraph [ref=e31]: ¿Listo para identificar Silencios Críticos en su próxima inversión BESS?
+      - button "Enviar Mensaje" [ref=e32] [cursor=pointer]
+  - contentinfo [ref=e33]:
+    - generic [ref=e34]:
+      - paragraph [ref=e35]: © 2024 BiP Omega. Todos los derechos reservados.
+      - paragraph [ref=e36]: Servicios de diagnóstico técnico independiente para la toma de decisiones de inversión.
+  - generic [ref=e39]:
+    - button "Menu" [ref=e40]:
+      - img [ref=e42]
+      - generic: Menu
+    - button "Inspect" [ref=e46]:
+      - img [ref=e48]
+      - generic: Inspect
+    - button "Audit" [ref=e50]:
+      - img [ref=e52]
+      - generic: Audit
+    - button "Settings" [ref=e55]:
+      - img [ref=e57]
+      - generic: Settings
+```

@@ -4,6 +4,23 @@ export default {
     theme: {
         extend: {
             colors: {
+                // Semantic Tokens (Linked to design-tokens.css)
+                primary: {
+                    DEFAULT: 'var(--color-primary)',
+                    light: 'var(--color-primary-light)',
+                },
+                secondary: {
+                    DEFAULT: 'var(--color-secondary)',
+                    dark: 'var(--color-secondary-dark)',
+                },
+                text: {
+                    body: 'var(--color-text-body)',
+                    heading: 'var(--color-text-heading)',
+                },
+                bg: {
+                    light: 'var(--color-bg-light)',
+                },
+                // Primitives
                 slate: {
                     50: '#f8fafc',
                     100: '#f1f5f9',

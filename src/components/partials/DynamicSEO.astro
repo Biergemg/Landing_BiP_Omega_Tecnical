@@ -1,0 +1,134 @@
+---
+import { getSEOConfig, generateStructuredData } from '../../lib/seo/seoConfig';
+
+export interface DynamicSEOProps {
+  page: string;
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonical?: string;
+  ogImage?: string;
+  ogImageAlt?: string;
+  noIndex?: boolean;
+  customStructuredData?: Record<string, any>;
+}
+
+const { 
+  page = 'home', 
+  title,
+  description,
+  keywords,
+  canonical,
+  ogImage,
+  ogImageAlt,
+  noIndex = false,
+  customStructuredData
+} = Astro.props as DynamicSEOProps;
+
+// Obtener configuración base para la página
+const baseConfig = getSEOConfig(page);
+
+// Combinar con props personalizadas
+const seoTitle = title || baseConfig.title;
+const seoDescription = description || baseConfig.description;
+const seoKeywords = keywords ? [...baseConfig.keywords, ...keywords].join(', ') : baseConfig.keywords.join(', ');
+const seoCanonical = canonical || baseConfig.canonical;
+const seoOgImage = ogImage || baseConfig.ogImage;
+const seoOgImageAlt = ogImageAlt || baseConfig.ogImageAlt;
+
+// Generar estructura de datos
+const structuredData = customStructuredData || generateStructuredData(page);
+
+// Obtener URL actual para canonical dinámico
+const currentUrl = Astro.url.href;
+---
+
+<!-- Primary Meta Tags Dinámicas -->
+<title>{seoTitle}</title>
+<meta name="title" content={seoTitle} />
+<meta name="description" content={seoDescription} />
+<meta name="keywords" content={seoKeywords} />
+<meta name="author" content="BiP Omega - Gustavo Bierge" />
+<meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+<meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />
+<meta name="language" content="English" />
+<meta name="revisit-after" content="7 days" />
+<meta name="rating" content="general" />
+
+<!-- Canonical URL Dinámica -->
+<link rel="canonical" href={seoCanonical} />
+
+<!-- Open Graph / Facebook Dinámico -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={currentUrl} />
+<meta property="og:site_name" content="BiP Omega" />
+<meta property="og:title" content={seoTitle} />
+<meta property="og:description" content={seoDescription} />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image" content={seoOgImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={seoOgImageAlt} />
+
+<!-- Twitter Card Dinámico -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={currentUrl} />
+<meta name="twitter:title" content={seoTitle} />
+<meta name="twitter:description" content={seoDescription} />
+<meta name="twitter:image" content={seoOgImage} />
+<meta name="twitter:image:alt" content={seoOgImageAlt} />
+<meta name="twitter:creator" content="@BiergeGustavo" />
+
+<!-- Additional SEO Meta Tags -->
+<meta name="copyright" content="BiP Omega" />
+<meta name="distribution" content="global" />
+<meta name="audience" content="business" />
+<meta name="page-topic" content="Technical Due Diligence" />
+<meta name="page-type" content="Business Services" />
+<meta name="subject" content="Energy Infrastructure Investment" />
+<meta name="classification" content="Technical Consulting" />
+
+<!-- Mobile-Specific Meta Tags -->
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-TileColor" content="#0f172a" />
+<meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+<meta name="msapplication-config" content="/browserconfig.xml" />
+
+<!-- Structured Data Dinámica -->
+<script type="application/ld+json" set:html={JSON.stringify(structuredData, null, 2)} is:inline />
+
+<!-- Breadcrumb Schema para páginas internas -->
+{page !== 'home' && (
+  <script type="application/ld+json" is:inline>
+    {{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://bipomega.com/"
+        }},
+        {{
+          "@type": "ListItem",
+          "position": 2,
+          "name": page.charAt(0).toUpperCase() + page.slice(1),
+          "item": currentUrl
+        }}
+      ]
+    }}
+  </script>
+)}
+
+<!-- Verificación de búsqueda para Google -->
+<meta name="google-site-verification" content="your-google-verification-code" />
+
+<!-- Bing Webmaster Tools -->
+<meta name="msvalidate.01" content="your-bing-verification-code" />
+
+<!-- Yandex Webmaster -->
+<meta name="yandex-verification" content="your-yandex-verification-code" />
+
+<!-- Alexa Verify ID -->
+<meta name="alexaVerifyID" content="your-alexa-verification-code" />

@@ -1,13 +1,17 @@
-export const sendEvent = (eventName: string, params: Record<string, any> = {}) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', eventName, {
-            ...params,
-            timestamp: Date.now()
-        });
-    } else {
-        // Only warn in development to avoid noise in prod if something loads late
+import type { EventParameters } from '../types';
+
+export function sendEvent(eventName: string, parameters: EventParameters = {}): void {
+    if (typeof window === 'undefined' || !window.gtag) {
+        console.warn('[Analytics] gtag not available');
+        return;
+    }
+
+    try {
+        window.gtag('event', eventName, parameters);
+    } catch {
+        // Fail silently for analytics
         if (import.meta.env.DEV) {
-            console.warn(`[Analytics] gtag not found, event skipped: ${eventName}`);
+            console.warn('Failed to send analytics event');
         }
     }
-};
+}

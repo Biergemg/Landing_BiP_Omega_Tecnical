@@ -1,15 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import ProblemStatement from '../components/ProblemStatement.astro';
-import Services from '../components/Services.astro';
-import Methodology from '../components/Methodology.astro';
-import CaseStudy from '../components/CaseStudy.astro';
-import WhyRemote from '../components/WhyRemote.astro';
-import TrustBar from '../components/TrustBar.astro';
-import ScopeDeclaration from '../components/ScopeDeclaration.astro';
-import ContactForm from '../components/ContactForm.astro';
-import Footer from '../components/Footer.astro';
+import Hero from '../components/sections/Hero.astro';
+import ProblemStatement from '../components/sections/ProblemStatement.astro';
+import Services from '../components/sections/Services.astro';
+import Methodology from '../components/sections/Methodology.astro';
+import CaseStudy from '../components/sections/CaseStudy.astro';
+import WhyRemote from '../components/sections/WhyRemote.astro';
+import TrustBar from '../components/sections/TrustBar.astro';
+import ScopeDeclaration from '../components/sections/ScopeDeclaration.astro';
+import ContactForm from '../components/sections/ContactForm.astro';
+import Footer from '../components/partials/Footer.astro';
 
 const seoTitle = "BiP Omega – Technical Due Diligence for Investment Decision Gating | Gustavo Bierge";
 const seoDescription = "Technical due diligence for investment decision gating. Identify $9.5-23M in potential unquantified risks hiding in public CEQA/NEPA filings before due diligence starts. No site visits. No NDA required.";
@@ -18,9 +18,13 @@ const seoDescription = "Technical due diligence for investment decision gating. 
 <Layout 
 	title={seoTitle}
 	description={seoDescription}
+	page="home"
 >
 	<main>
-		<Hero />
+		<Hero 
+			headline="Technical Due Diligence for Investment Decision Gating"
+			subheadline="Identify the $9.5–23M in potential unquantified risks hiding in public CEQA/NEPA filings — before due diligence starts."
+		/>
 		<ProblemStatement />
 		<Services />
 		<Methodology />
