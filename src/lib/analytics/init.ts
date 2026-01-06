@@ -1,3 +1,4 @@
+import { initCustomEvents } from './events/customEvents';
 import type { PageViewEvent } from './types';
 import { enrichVisitor } from './enrichment/enrichVisitor';
 import { sendEvent } from './proxy/sendEvent';
@@ -16,8 +17,8 @@ export function initAnalytics(): void {
     try {
         // 1. Bootstrap GA4 (Logic only, script is in HEAD)
         window.dataLayer = window.dataLayer || [];
-        window.gtag = function (...args: unknown[]) { 
-            window.dataLayer.push(args); 
+        window.gtag = function (...args: unknown[]) {
+            window.dataLayer.push(args);
         };
         window.gtag('js', new Date());
         window.gtag('config', 'G-KRV707DJ7F', {
@@ -29,7 +30,7 @@ export function initAnalytics(): void {
         // initWebVitals(); // TODO: Implementar cuando se migre el módulo
 
         // 3. Initialize Custom Events (Scroll, PDF, etc.)
-        // initCustomEvents(); // TODO: Implementar cuando se migre el módulo
+        initCustomEvents();
 
         // 4. Enrich Visitor Profile & Send Page View (Enhanced)
         const visitorProfile = enrichVisitor();
