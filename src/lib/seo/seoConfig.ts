@@ -22,12 +22,12 @@ export const seoConfig: PageSEO = {
     title: "BiP Omega – Forensic Due Diligence for BESS | $9.5-23M Risk Identified",
     description: "Independent technical due diligence for investment decision gating. Phase 1 diagnostic in 72 hours using forensic analysis of public records. 89% validation rate.",
     keywords: [
-      "technical due diligence", "independent technical diagnostic", "BESS risk assessment", 
+      "technical due diligence", "independent technical diagnostic", "BESS risk assessment",
       "energy infrastructure", "investment decision gating", "forensic analysis",
       "battery energy storage systems", "pre-investment analysis", "public records analysis"
     ],
     canonical: "https://bipomega.com/",
-    ogImage: "https://bipomega.com/og-image-home.png",
+    ogImage: "https://bipomega.com/og-image.png",
     ogImageAlt: "BiP Omega - Forensic Due Diligence for BESS Projects"
   },
   about: {

@@ -1,12 +1,17 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sentry from '@sentry/astro';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://bipomega.com',
   prefetch: true,
   integrations: [
     tailwind(),
+    sitemap({
+      filter: (page) => page !== 'https://bipomega.com/404',
+    }),
     sentry({
       project: "javascript-astro",
       org: "bip-omega",
@@ -18,7 +23,7 @@ export default defineConfig({
         sendDefaultPii: false, // STRICTLY DISABLED for privacy compliance
       },
       serverInitOptions: {
-        sendDefaultPii: false, 
+        sendDefaultPii: false,
       }
     })
   ],
