@@ -1,4 +1,5 @@
 import { initCustomEvents } from './events/customEvents';
+import { initWebVitals } from './performance/webVitals';
 import type { PageViewEvent } from './types';
 import { enrichVisitor } from './enrichment/enrichVisitor';
 import { sendEvent } from './proxy/sendEvent';
@@ -27,7 +28,7 @@ export function initAnalytics(): void {
         });
 
         // 2. Initialize Web Vitals
-        // initWebVitals(); // TODO: Implementar cuando se migre el módulo
+        initWebVitals();
 
         // 3. Initialize Custom Events (Scroll, PDF, etc.)
         initCustomEvents();
