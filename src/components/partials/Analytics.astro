@@ -2,15 +2,28 @@
 ---
 
 <!-- Google Analytics 4 -->
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-KRV707DJ7F"></script>
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-KRV707DJ7F" onerror="console.warn('GA script failed to load')"></script>
 <script>
-  import { initGtag } from '../../lib/analytics/gtag';
-  initGtag();
+  try {
+    import('../../lib/analytics/gtag').then(module => {
+      module.initGtag();
+    }).catch(() => {
+      // Fail silently - analytics is optional
+    });
+  } catch (e) {
+    // Fail silently - analytics is optional
+  }
 </script>
 
 <!-- Analytics Initialization (Core + Web Vitals + Custom Events) -->
 <script>
-  import { initAnalytics } from '../../lib/analytics/init';
-  // Initialize analytics on client load
-  initAnalytics();
+  try {
+    import('../../lib/analytics/init').then(module => {
+      module.initAnalytics();
+    }).catch(() => {
+      // Fail silently - analytics is optional
+    });
+  } catch (e) {
+    // Fail silently - analytics is optional
+  }
 </script>

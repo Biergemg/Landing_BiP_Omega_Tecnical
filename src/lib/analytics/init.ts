@@ -21,30 +21,46 @@ export function initAnalytics(): void {
         window.gtag = function (...args: unknown[]) {
             window.dataLayer.push(args);
         };
-        window.gtag('js', new Date());
-        window.gtag('config', 'G-KRV707DJ7F', {
-            anonymize_ip: true,
-            send_page_view: false
-        });
 
-        // 2. Initialize Web Vitals
-        initWebVitals();
+        // Guard against gtag not being available
+        if (typeof window.gtag === 'function') {
+            window.gtag('js', new Date());
+            window.gtag('config', 'G-KRV707DJ7F', {
+                anonymize_ip: true,
+                send_page_view: false
+            });
+        }
+
+        // 2. Initialize Web Vitals (wrapped defensively)
+        try {
+            initWebVitals();
+        } catch {
+            // Fail silently - web vitals is optional
+        }
 
         // 3. Initialize Custom Events (Scroll, PDF, etc.)
-        initCustomEvents();
+        try {
+            initCustomEvents();
+        } catch {
+            // Fail silently - custom events are optional
+        }
 
         // 4. Enrich Visitor Profile & Send Page View (Enhanced)
-        const visitorProfile = enrichVisitor();
+        try {
+            const visitorProfile = enrichVisitor();
 
-        // Explicit Page View with enriched data
-        const pageViewData: PageViewEvent = {
-            ...visitorProfile,
-            page_title: document.title,
-            page_location: window.location.href,
-            page_path: window.location.pathname
-        };
+            // Explicit Page View with enriched data
+            const pageViewData: PageViewEvent = {
+                ...visitorProfile,
+                page_title: document.title,
+                page_location: window.location.href,
+                page_path: window.location.pathname
+            };
 
-        sendEvent('page_view', pageViewData);
+            sendEvent('page_view', pageViewData);
+        } catch {
+            // Fail silently - page view tracking is optional
+        }
 
         // 5. Expose audit function to window
         // window.__analyticsAudit = runAudit; // TODO: Implementar cuando se migre el módulo
