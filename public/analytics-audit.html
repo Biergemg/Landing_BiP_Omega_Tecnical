@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Audit - BiP Omega</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .warning { background-color: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+        .info { background-color: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        .log { background-color: #f8f9fa; padding: 10px; margin: 10px 0; border-radius: 5px; font-family: monospace; }
+        button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Analytics Audit - BiP Omega</h1>
+    
+    <div id="status-container"></div>
+    
+    <div class="test-section">
+        <h2>🧪 Pruebas de Funcionamiento</h2>
+        <button onclick="testPageView()">Enviar Page View</button>
+        <button onclick="testCustomEvent()">Enviar Evento Personalizado</button>
+        <button onclick="testPDFDownload()">Simular Descarga PDF</button>
+        <button onclick="clearLogs()">Limpiar Logs</button>
+    </div>
+    
+    <div id="logs" class="log"></div>
+    
+    <script>
+        function log(message, type = 'info') {
+            const logs = document.getElementById('logs');
+            const timestamp = new Date().toLocaleTimeString();
+            logs.innerHTML += `<div class="${type}">[${timestamp}] ${message}</div>`;
+            logs.scrollTop = logs.scrollHeight;
+        }
+        
+        function addStatus(message, type = 'info') {
+            const container = document.getElementById('status-container');
+            container.innerHTML += `<div class="status ${type}">${message}</div>`;
+        }
+        
+        function clearLogs() {
+            document.getElementById('logs').innerHTML = '';
+        }
+        
+        // Auditoría inicial
+        function runAudit() {
+            log('Iniciando auditoría de Analytics...', 'info');
+            
+            // 1. Verificar gtag
+            if (typeof window.gtag === 'function') {
+                addStatus('✅ gtag está definido y es una función', 'success');
+                log('gtag encontrado correctamente', 'success');
+            } else {
+                addStatus('❌ gtag no está definido o no es una función', 'error');
+                log('ERROR: gtag no encontrado', 'error');
+            }
+            
+            // 2. Verificar dataLayer
+            if (window.dataLayer && Array.isArray(window.dataLayer)) {
+                addStatus('✅ dataLayer está definido y es un array', 'success');
+                log(`dataLayer contiene ${window.dataLayer.length} elementos`, 'success');
+            } else {
+                addStatus('❌ dataLayer no está definido o no es un array', 'error');
+                log('ERROR: dataLayer no encontrado', 'error');
+            }
+            
+            // 3. Verificar ID de medición
+            const ga4Id = 'G-KRV707DJ7F';
+            if (window.gtag) {
+                try {
+                    // Intentar obtener la configuración actual
+                    window.gtag('config', ga4Id);
+                    addStatus(`✅ Configuración GA4 (${ga4Id}) aplicada`, 'success');
+                    log(`GA4 ID ${ga4Id} configurado`, 'success');
+                } catch (error) {
+                    addStatus(`⚠️ Error al configurar GA4: ${error.message}`, 'warning');
+                    log(`WARNING: Error configurando GA4: ${error.message}`, 'warning');
+                }
+            }
+            
+            // 4. Verificar scripts cargados
+            const scripts = document.querySelectorAll('script[src*="googletagmanager.com"]');
+            if (scripts.length > 0) {
+                addStatus(`✅ Script de Google Analytics cargado (${scripts.length} script(s))`, 'success');
+                scripts.forEach(script => log(`Script encontrado: ${script.src}`, 'success'));
+            } else {
+                addStatus('❌ Script de Google Analytics no encontrado', 'error');
+                log('ERROR: Script de GA no encontrado en el DOM', 'error');
+            }
+            
+            // 5. Verificar últimos eventos en dataLayer
+            if (window.dataLayer && window.dataLayer.length > 0) {
+                const lastEvents = window.dataLayer.slice(-5); // Últimos 5 eventos
+                log('Últimos eventos en dataLayer:', 'info');
+                lastEvents.forEach((event, index) => {
+                    log(`Evento ${index + 1}: ${JSON.stringify(event)}`, 'info');
+                });
+            }
+            
+            // 6. Información del navegador
+            log(`User Agent: ${navigator.userAgent}`, 'info');
+            log(`URL actual: ${window.location.href}`, 'info');
+            log(`Fecha y hora: ${new Date().toLocaleString()}`, 'info');
+            
+            // 7. Verificar bloqueadores de anuncios
+            setTimeout(() => {
+                if (typeof window.gtag === 'undefined') {
+                    addStatus('⚠️ Posible bloqueador de anuncios detectado', 'warning');
+                    log('WARNING: Posible bloqueador de anuncios - gtag no está disponible', 'warning');
+                }
+            }, 2000);
+        }
+        
+        // Funciones de prueba
+        function testPageView() {
+            if (typeof window.gtag === 'function') {
+                try {
+                    window.gtag('event', 'page_view', {
+                        page_title: 'Analytics Audit Test',
+                        page_location: window.location.href,
+                        page_path: window.location.pathname,
+                        test_event: true
+                    });
+                    log('✅ Page view de prueba enviado', 'success');
+                } catch (error) {
+                    log(`❌ Error enviando page view: ${error.message}`, 'error');
+                }
+            } else {
+                log('❌ gtag no está disponible', 'error');
+            }
+        }
+        
+        function testCustomEvent() {
+            if (typeof window.gtag === 'function') {
+                try {
+                    window.gtag('event', 'test_event', {
+                        event_category: 'test',
+                        event_label: 'analytics_audit',
+                        value: 1,
+                        custom_parameter: 'test_value'
+                    });
+                    log('✅ Evento personalizado de prueba enviado', 'success');
+                } catch (error) {
+                    log(`❌ Error enviando evento: ${error.message}`, 'error');
+                }
+            } else {
+                log('❌ gtag no está disponible', 'error');
+            }
+        }
+        
+        function testPDFDownload() {
+            // Crear un enlace temporal para simular descarga
+            const link = document.createElement('a');
+            link.href = '/test-document.pdf';
+            link.textContent = 'Test PDF Document';
+            document.body.appendChild(link);
+            
+            // Simular clic
+            link.click();
+            
+            // Remover el enlace
+            setTimeout(() => {
+                document.body.removeChild(link);
+                log('✅ Simulación de descarga PDF completada', 'success');
+            }, 100);
+        }
+        
+        // Ejecutar auditoría al cargar la página
+        window.addEventListener('load', () => {
+            setTimeout(runAudit, 1000); // Esperar 1 segundo para que se cargue todo
+        });
+        
+        // Monitorear cambios en dataLayer
+        if (window.dataLayer) {
+            const originalPush = window.dataLayer.push;
+            window.dataLayer.push = function(...args) {
+                const result = originalPush.apply(this, args);
+                log(`📊 Nuevo evento en dataLayer: ${JSON.stringify(args[0])}`, 'info');
+                return result;
+            };
+        }
+    </script>
+</body>
+</html>

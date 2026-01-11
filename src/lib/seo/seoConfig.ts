@@ -62,6 +62,28 @@ export const seoConfig: PageSEO = {
     canonical: "https://bipomega.com/contact/",
     ogImage: "https://bipomega.com/og-image-contact.png",
     ogImageAlt: "Contact BiP Omega - Technical Due Diligence"
+  },
+  terms: {
+    title: "Terms of Service - BiP Omega",
+    description: "Terms of service for BiP Omega technical due diligence services. Professional independence and intellectual property terms.",
+    keywords: [
+      "terms of service", "BiP Omega terms", "technical due diligence terms", "professional independence",
+      "intellectual property", "liability limitation", "service terms"
+    ],
+    canonical: "https://bipomega.com/terms/",
+    ogImage: "https://bipomega.com/og-image-terms.png",
+    ogImageAlt: "BiP Omega Terms of Service"
+  },
+  privacy: {
+    title: "Privacy Policy - BiP Omega",
+    description: "Privacy policy for BiP Omega. Minimal data collection, no tracking cookies, professional confidentiality.",
+    keywords: [
+      "privacy policy", "BiP Omega privacy", "data collection", "cookies policy", 
+      "professional confidentiality", "information security", "privacy terms"
+    ],
+    canonical: "https://bipomega.com/privacy/",
+    ogImage: "https://bipomega.com/og-image-privacy.png",
+    ogImageAlt: "BiP Omega Privacy Policy"
   }
 };
 
