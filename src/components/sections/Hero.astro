@@ -4,9 +4,9 @@ import { type HeroProps } from '../../types/components';
 import logoImage from '../../assets/logo.png';
 
 interface Props extends HeroProps {}
-const { 
-  headline = "Technical Investment Gating for Utility-Scale BESS Projects",
-  subheadline = "Identify whether a project should advance to full due diligence — or halt for critical clarification — using only public records.",
+const {
+  headline = "Technical Due Diligence That Defends Itself — for Utility-Scale BESS",
+  subheadline = "Structured technical analysis adapted to your mandate — investment screening, lender review, or independent assessment. Every finding documented. Every conclusion traceable.",
   ctaText = "Request Initial Scope",
   ctaHref = "#contact"
 } = Astro.props;
@@ -22,13 +22,13 @@ const {
       <p class="text-xl text-body mb-8 leading-relaxed">
         {subheadline}
         <br/><br/>
-        <span class="font-bold text-heading">No site visit. No NDA. No developer coordination.</span>
       </p>
-      
-      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-start">
         <a href={ctaHref} class="btn-primary text-center">
           {ctaText}
         </a>
+        <span class="text-sm text-slate-500 self-center">Initial scope assessment: typically within 48 hours</span>
       </div>
     </div>
   </div>

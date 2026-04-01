@@ -59,9 +59,12 @@ const { recipientEmail = "gustavo.bierge@bipomega.com" } = Astro.props;
               <option value="" disabled selected>Select your role...</option>
               <option value="Investment Committee Member / CIO">Investment Committee Member / CIO</option>
               <option value="Lender / Debt Provider">Lender / Debt Provider</option>
+              <option value="Fund Acquisition Team / M&A">Fund Acquisition Team / M&A</option>
+              <option value="Lender's Counsel / Legal Advisor">Lender's Counsel / Legal Advisor</option>
               <option value="Developer">Developer (seeking investment readiness audit)</option>
               <option value="Independent Engineer / Technical Advisor">Independent Engineer / Technical Advisor</option>
               <option value="Insurance / Risk Underwriter">Insurance / Risk Underwriter</option>
+              <option value="Procurement / Tender Evaluation">Procurement / Tender Evaluation</option>
               <option value="Other">Other</option>
             </select>
           </div>
@@ -71,8 +74,10 @@ const { recipientEmail = "gustavo.bierge@bipomega.com" } = Astro.props;
             <select id="stage" name="stage" required class="w-full px-4 py-3 rounded-sm border border-slate-300 focus:border-slate-500 focus:ring-1 focus:ring-slate-500 outline-none transition-all bg-white">
               <option value="" disabled selected>Select project stage...</option>
               <option value="Term Sheet / LOI negotiation">Term Sheet / LOI negotiation (active)</option>
+              <option value="Acquisition / Portfolio transaction">Acquisition / Portfolio transaction</option>
               <option value="Due diligence preparation">Due diligence preparation</option>
               <option value="Pre-investment screening">Pre-investment screening</option>
+              <option value="Tender evaluation / bid support">Tender evaluation / bid support</option>
               <option value="Post-close technical validation">Post-close technical validation</option>
               <option value="General inquiry">General inquiry</option>
             </select>
@@ -84,7 +89,7 @@ const { recipientEmail = "gustavo.bierge@bipomega.com" } = Astro.props;
           </div>
           
           <button type="submit" class="w-full btn-primary">
-            Request Forensic Diagnostic (Phase 1)
+            Request Technical Scope
           </button>
           
           <p class="text-xs text-slate-500 text-center mt-4">

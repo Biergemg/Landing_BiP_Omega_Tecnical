@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/sections/Hero.astro';
 import ProblemStatement from '../components/sections/ProblemStatement.astro';
 import Services from '../components/sections/Services.astro';
+import BESSRiskAreas from '../components/sections/BESSRiskAreas.astro';
 import Methodology from '../components/sections/Methodology.astro';
 import CaseStudy from '../components/sections/CaseStudy.astro';
 import WhyRemote from '../components/sections/WhyRemote.astro';
@@ -11,22 +12,23 @@ import ScopeDeclaration from '../components/sections/ScopeDeclaration.astro';
 import ContactForm from '../components/sections/ContactForm.astro';
 import Footer from '../components/partials/Footer.astro';
 
-const seoTitle = "BiP Omega – Technical Investment Gating for Utility-Scale BESS Projects | Gustavo Bierge";
-const seoDescription = "Public-record technical investment gating for utility-scale BESS projects. Determine whether a project should advance to full due diligence or halt for critical clarification.";
+const seoTitle = "BiP Omega – Technical Due Diligence for Utility-Scale BESS | Gustavo Bierge";
+const seoDescription = "Structured technical due diligence for utility-scale BESS projects. Mandate-adaptive analysis for investment committees, lenders, and independent engineers. Every conclusion traceable.";
 ---
 
-<Layout 
+<Layout
 	title={seoTitle}
 	description={seoDescription}
 	page="home"
 >
 	<main>
-		<Hero 
-			headline="Technical Investment Gating for Utility-Scale BESS Projects"
-			subheadline="Identify whether a project should advance to full due diligence — or halt for critical clarification — using only public records."
+		<Hero
+			headline="Technical Due Diligence That Defends Itself — for Utility-Scale BESS"
+			subheadline="Structured technical analysis adapted to your mandate — investment screening, lender review, or independent assessment. Every finding documented. Every conclusion traceable."
 		/>
 		<ProblemStatement />
 		<Services />
+		<BESSRiskAreas />
 		<Methodology />
 		<CaseStudy />
 		<WhyRemote />
