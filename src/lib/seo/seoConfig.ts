@@ -1,3 +1,5 @@
+import { DEFAULT_OG_IMAGE, SITE_URL } from '../site/config';
+
 export interface SEOConfig {
   title: string;
   description: string;
@@ -6,84 +8,99 @@ export interface SEOConfig {
   ogImage?: string;
   ogImageAlt?: string;
   noIndex?: boolean;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 export interface PageSEO {
-  home: SEOConfig;
-  about: SEOConfig;
-  services: SEOConfig;
-  contact: SEOConfig;
   [key: string]: SEOConfig;
 }
 
+const baseOrganization = {
+  '@type': 'Organization',
+  '@id': `${SITE_URL}/#organization`,
+  name: 'BiP Omega',
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.png`,
+  description: 'Independent technical due diligence for utility-scale BESS projects and investment decision gating.',
+  founder: {
+    '@type': 'Person',
+    name: 'Gustavo Bierge',
+    jobTitle: 'Founder'
+  },
+  sameAs: ['https://www.linkedin.com/in/gustavo-bierge'],
+  areaServed: 'Global'
+};
+
 export const seoConfig: PageSEO = {
   home: {
-    title: "BiP Omega – Forensic Due Diligence for BESS | $9.5-23M Risk Identified",
-    description: "Independent technical due diligence for investment decision gating. Phase 1 diagnostic in 72 hours using forensic analysis of public records. 89% validation rate.",
+    title: 'BiP Omega – Technical Due Diligence for Utility-Scale BESS | Gustavo Bierge',
+    description: 'Structured technical due diligence for utility-scale BESS projects. Mandate-adaptive analysis for investment committees, lenders, and independent engineers. Every conclusion traceable.',
     keywords: [
-      "technical due diligence", "independent technical diagnostic", "BESS risk assessment",
-      "energy infrastructure", "investment decision gating", "forensic analysis",
-      "battery energy storage systems", "pre-investment analysis", "public records analysis"
+      'technical due diligence',
+      'technical due diligence BESS',
+      'battery energy storage due diligence',
+      'investment decision gating',
+      'independent engineer BESS',
+      'energy storage project risk assessment'
     ],
-    canonical: "https://bipomega.com/",
-    ogImage: "https://bipomega.com/og-image.png",
-    ogImageAlt: "BiP Omega - Forensic Due Diligence for BESS Projects"
+    canonical: `${SITE_URL}/`,
+    ogImage: DEFAULT_OG_IMAGE,
+    ogImageAlt: 'BiP Omega - Technical Due Diligence for Utility-Scale BESS'
   },
-  about: {
-    title: "About BiP Omega | Technical Due Diligence Expertise",
-    description: "Learn about our methodology, team expertise, and 89% validation rate in identifying Critical Silences that standard IE reports miss.",
+  technicalDueDiligenceBess: {
+    title: 'Technical Due Diligence for BESS Projects | BiP Omega',
+    description: 'Technical due diligence for utility-scale BESS projects with traceable evidence classification, critical silence detection, and decision-ready risk framing for investors and lenders.',
     keywords: [
-      "about BiP Omega", "Gustavo Bierge", "technical due diligence methodology",
-      "Critical Silences", "investment decision gating", "energy infrastructure expertise"
+      'technical due diligence BESS',
+      'battery energy storage due diligence',
+      'BESS due diligence',
+      'utility-scale battery storage risk assessment'
     ],
-    canonical: "https://bipomega.com/about/",
-    ogImage: "https://bipomega.com/og-image-about.png",
-    ogImageAlt: "About BiP Omega - Technical Due Diligence Methodology"
+    canonical: `${SITE_URL}/technical-due-diligence-bess/`,
+    ogImage: DEFAULT_OG_IMAGE,
+    ogImageAlt: 'Technical Due Diligence for BESS Projects'
   },
-  services: {
-    title: "Services | Phase 1 Forensic Diagnostic for BESS Projects",
-    description: "72-hour fatal flaw forensic audit using publicly available information. Binary Go/No-Go investment decision before NDA signature.",
+  independentEngineerBess: {
+    title: 'Independent Engineer for BESS vs Early Technical Gate | BiP Omega',
+    description: 'Independent engineer BESS positioning page for lenders and investors comparing full IE scope against an earlier technical gate based on public-record evidence and critical silence detection.',
     keywords: [
-      "Phase 1 diagnostic", "forensic audit", "BESS project analysis", "investment decision gating",
-      "public records analysis", "fatal flaw identification", "technical due diligence services"
+      'independent engineer BESS',
+      'BESS technical advisory',
+      'battery storage independent engineer',
+      'BESS lender technical review'
     ],
-    canonical: "https://bipomega.com/services/",
-    ogImage: "https://bipomega.com/og-image-services.png",
-    ogImageAlt: "BiP Omega Services - Phase 1 Forensic Diagnostic"
+    canonical: `${SITE_URL}/independent-engineer-bess/`,
+    ogImage: DEFAULT_OG_IMAGE,
+    ogImageAlt: 'Independent Engineer for BESS'
   },
-  contact: {
-    title: "Contact BiP Omega | Technical Due Diligence Consultation",
-    description: "Schedule a consultation for independent technical due diligence. Identify fatal flaws before capital deployment.",
+  forensicCaseStudy: {
+    title: 'BESS Forensic Case Study and Sample Technical Report | BiP Omega',
+    description: 'Forensic case study page for BESS project risk assessment queries. Review how BiP Omega structures evidence classification, critical silence analysis, and decision-ready technical outputs.',
     keywords: [
-      "contact BiP Omega", "technical due diligence consultation", "BESS project evaluation",
-      "investment decision support", "schedule consultation"
+      'energy storage project risk assessment',
+      'BESS forensic case study',
+      'sample due diligence report',
+      'battery storage technical report'
     ],
-    canonical: "https://bipomega.com/contact/",
-    ogImage: "https://bipomega.com/og-image-contact.png",
-    ogImageAlt: "Contact BiP Omega - Technical Due Diligence"
+    canonical: `${SITE_URL}/forensic-case-study/`,
+    ogImage: DEFAULT_OG_IMAGE,
+    ogImageAlt: 'BESS Forensic Case Study'
   },
   terms: {
-    title: "Terms of Service - BiP Omega",
-    description: "Terms of service for BiP Omega technical due diligence services. Professional independence and intellectual property terms.",
-    keywords: [
-      "terms of service", "BiP Omega terms", "technical due diligence terms", "professional independence",
-      "intellectual property", "liability limitation", "service terms"
-    ],
-    canonical: "https://bipomega.com/terms/",
-    ogImage: "https://bipomega.com/og-image-terms.png",
-    ogImageAlt: "BiP Omega Terms of Service"
+    title: 'Terms of Service - BiP Omega',
+    description: 'Terms of service for BiP Omega technical due diligence services. Professional independence and intellectual property terms.',
+    keywords: ['terms of service', 'BiP Omega terms', 'technical due diligence terms'],
+    canonical: `${SITE_URL}/terms/`,
+    ogImage: DEFAULT_OG_IMAGE,
+    ogImageAlt: 'BiP Omega Terms of Service'
   },
   privacy: {
-    title: "Privacy Policy - BiP Omega",
-    description: "Privacy policy for BiP Omega. Minimal data collection, no tracking cookies, professional confidentiality.",
-    keywords: [
-      "privacy policy", "BiP Omega privacy", "data collection", "cookies policy", 
-      "professional confidentiality", "information security", "privacy terms"
-    ],
-    canonical: "https://bipomega.com/privacy/",
-    ogImage: "https://bipomega.com/og-image-privacy.png",
-    ogImageAlt: "BiP Omega Privacy Policy"
+    title: 'Privacy Policy - BiP Omega',
+    description: 'Privacy policy for BiP Omega. Minimal data collection, no tracking cookies, and professional confidentiality.',
+    keywords: ['privacy policy', 'BiP Omega privacy', 'professional confidentiality'],
+    canonical: `${SITE_URL}/privacy/`,
+    ogImage: DEFAULT_OG_IMAGE,
+    ogImageAlt: 'BiP Omega Privacy Policy'
   }
 };
 
@@ -91,50 +108,110 @@ export function getSEOConfig(page: string): SEOConfig {
   return seoConfig[page] || seoConfig.home;
 }
 
-export function generateStructuredData(page: string): Record<string, unknown> {
-  const baseSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "BiP Omega",
-    "url": "https://bipomega.com",
-    "logo": "https://bipomega.com/logo.png",
-    "description": "Independent technical due diligence for investment decision gating"
+export function generateStructuredData(page: string): Record<string, unknown> | Record<string, unknown>[] {
+  const baseWebPage = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    isPartOf: {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      name: 'BiP Omega',
+      url: SITE_URL
+    },
+    about: baseOrganization
   };
 
-  const pageSchemas = {
-    home: {
-      "@type": "WebSite",
-      "mainEntity": baseSchema,
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": [".hero-headline", ".hero-subheadline"]
+  const pageSchemas: Record<string, Record<string, unknown> | Record<string, unknown>[]> = {
+    home: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        name: 'BiP Omega',
+        url: SITE_URL,
+        publisher: baseOrganization,
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: `${SITE_URL}/?q={search_term_string}`,
+          'query-input': 'required name=search_term_string'
+        }
+      },
+      {
+        ...baseWebPage,
+        '@id': `${SITE_URL}/#webpage`,
+        url: `${SITE_URL}/`,
+        name: 'BiP Omega - Technical Due Diligence for Utility-Scale BESS',
+        mainEntity: baseOrganization
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Technical Due Diligence for Utility-Scale BESS Projects',
+        serviceType: 'Technical Due Diligence',
+        provider: baseOrganization,
+        areaServed: 'Global',
+        audience: {
+          '@type': 'Audience',
+          audienceType: 'Investment committees, lenders, and risk-sensitive infrastructure buyers'
+        }
+      }
+    ],
+    technicalDueDiligenceBess: {
+      ...baseWebPage,
+      '@id': `${SITE_URL}/technical-due-diligence-bess/#webpage`,
+      url: `${SITE_URL}/technical-due-diligence-bess/`,
+      name: 'Technical Due Diligence for BESS Projects',
+      mainEntity: {
+        '@type': 'Service',
+        name: 'Technical Due Diligence for BESS Projects',
+        serviceType: 'BESS Technical Due Diligence',
+        provider: baseOrganization,
+        areaServed: 'Global'
       }
     },
-    services: {
-      "@type": "Service",
-      "serviceType": "Technical Due Diligence",
-      "provider": baseSchema,
-      "areaServed": "Global",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Technical Due Diligence Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Phase 1 - Fatal Flaw Forensic Audit",
-              "description": "Binary Go/No-Go investment decision with quantified exposure"
-            }
-          }
-        ]
+    independentEngineerBess: {
+      ...baseWebPage,
+      '@id': `${SITE_URL}/independent-engineer-bess/#webpage`,
+      url: `${SITE_URL}/independent-engineer-bess/`,
+      name: 'Independent Engineer for BESS vs Early Technical Gate',
+      mainEntity: {
+        '@type': 'Article',
+        headline: 'Independent Engineer for BESS: What Buyers Need Before Full IE Scope',
+        author: {
+          '@type': 'Person',
+          name: 'Gustavo Bierge'
+        },
+        publisher: baseOrganization
       }
     },
-    contact: {
-      "@type": "ContactPage",
-      "mainEntity": baseSchema
+    forensicCaseStudy: {
+      ...baseWebPage,
+      '@id': `${SITE_URL}/forensic-case-study/#webpage`,
+      url: `${SITE_URL}/forensic-case-study/`,
+      name: 'BESS Forensic Case Study and Sample Technical Report',
+      mainEntity: {
+        '@type': 'TechArticle',
+        headline: 'BESS Forensic Case Study: Evidence Structure Before Full Due Diligence',
+        author: {
+          '@type': 'Person',
+          name: 'Gustavo Bierge'
+        },
+        publisher: baseOrganization
+      }
+    },
+    terms: {
+      ...baseWebPage,
+      '@id': `${SITE_URL}/terms/#webpage`,
+      url: `${SITE_URL}/terms/`,
+      name: 'Terms of Service - BiP Omega'
+    },
+    privacy: {
+      ...baseWebPage,
+      '@id': `${SITE_URL}/privacy/#webpage`,
+      url: `${SITE_URL}/privacy/`,
+      name: 'Privacy Policy - BiP Omega'
     }
   };
 
-  return pageSchemas[page as keyof typeof pageSchemas] || pageSchemas.home;
+  return pageSchemas[page] || pageSchemas.home;
 }

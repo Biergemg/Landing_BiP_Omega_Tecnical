@@ -1,29 +1,28 @@
 ---
+import { GOOGLE_ANALYTICS_ID } from '../../lib/site/config';
 ---
 
-<!-- Google Analytics 4 -->
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-KRV707DJ7F" onerror="console.warn('GA script failed to load')"></script>
+<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`} onerror="console.warn('GA script failed to load')"></script>
 <script>
   try {
-    import('../../lib/analytics/gtag').then(module => {
+    import('../../lib/analytics/gtag').then((module) => {
       module.initGtag();
     }).catch(() => {
       // Fail silently - analytics is optional
     });
-  } catch (e) {
+  } catch {
     // Fail silently - analytics is optional
   }
 </script>
 
-<!-- Analytics Initialization (Core + Web Vitals + Custom Events) -->
 <script>
   try {
-    import('../../lib/analytics/init').then(module => {
+    import('../../lib/analytics/init').then((module) => {
       module.initAnalytics();
     }).catch(() => {
       // Fail silently - analytics is optional
     });
-  } catch (e) {
+  } catch {
     // Fail silently - analytics is optional
   }
 </script>

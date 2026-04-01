@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Footer from '../../components/partials/Footer.astro';
+import SupportPageShell from '../../components/seo/SupportPageShell.astro';
+import { SITE_URL } from '../../lib/site/config';
+
+const title = 'BESS Forensic Case Study and Sample Technical Report | BiP Omega';
+const description = 'Forensic case study page for BESS project risk assessment queries. Review how BiP Omega structures evidence classification, critical silence analysis, and decision-ready technical outputs.';
+const canonical = `${SITE_URL}/forensic-case-study/`;
+---
+
+<Layout title={title} description={description} page="forensicCaseStudy" canonical={canonical}>
+  <main>
+    <SupportPageShell
+      eyebrow="Forensic case study"
+      title="BESS Forensic Case Study: Evidence Structure Before Full Due Diligence"
+      intro="This page supports search demand around case studies, report samples, and technical risk-assessment methodology. It gives Google and buyers a dedicated URL for the report-format conversation without forcing the main landing page to carry every ranking intent."
+      primaryKeyword="energy storage project risk assessment"
+      ctaHref="/REPORT_PUBLIC_CASE_STUDY.pdf"
+      ctaLabel="Download Sample Report"
+    />
+
+    <section class="py-16 bg-white">
+      <div class="section-container max-w-4xl grid gap-12 lg:grid-cols-2">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">What the sample demonstrates</h2>
+          <ul class="space-y-3 text-slate-700">
+            <li>• Evidence classification register for technical claims</li>
+            <li>• Separation of verified findings, assumptions, and critical silences</li>
+            <li>• Risk framing tied to capital exposure and execution blockers</li>
+            <li>• Decision output that can be reviewed by investment stakeholders</li>
+          </ul>
+        </div>
+        <div class="bg-slate-50 border border-slate-200 rounded-sm p-6">
+          <h3 class="font-semibold text-slate-900 mb-3">Why this page exists for SEO</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Searchers looking for <strong>BESS case study</strong>, <strong>sample due diligence report</strong>, or <strong>energy storage project risk assessment</strong> have different intent than users landing directly on a commercial homepage. This page isolates that intent and channels it back into the core offer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-slate-900 text-white">
+      <div class="section-container max-w-4xl">
+        <h2 class="text-2xl font-bold mb-6">Next-step paths</h2>
+        <div class="grid gap-4 md:grid-cols-3">
+          <a href="/technical-due-diligence-bess/" class="border border-slate-700 rounded-sm p-5 hover:border-slate-500 transition-colors">
+            <h3 class="font-semibold mb-2">Due diligence page</h3>
+            <p class="text-sm text-slate-300">For buyers explicitly searching for BESS technical due diligence.</p>
+          </a>
+          <a href="/independent-engineer-bess/" class="border border-slate-700 rounded-sm p-5 hover:border-slate-500 transition-colors">
+            <h3 class="font-semibold mb-2">IE comparison page</h3>
+            <p class="text-sm text-slate-300">For users comparing early triage against traditional IE scope.</p>
+          </a>
+          <a href="/#contact" class="border border-slate-700 rounded-sm p-5 hover:border-slate-500 transition-colors">
+            <h3 class="font-semibold mb-2">Request initial scope</h3>
+            <p class="text-sm text-slate-300">Return to the main landing page to open a mandate conversation.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

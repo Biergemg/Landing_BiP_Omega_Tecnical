@@ -1,0 +1,84 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Footer from '../../components/partials/Footer.astro';
+import SupportPageShell from '../../components/seo/SupportPageShell.astro';
+import { SITE_URL } from '../../lib/site/config';
+
+const title = 'Technical Due Diligence for BESS Projects | BiP Omega';
+const description = 'Technical due diligence for utility-scale BESS projects with traceable evidence classification, critical silence detection, and decision-ready risk framing for investors and lenders.';
+const canonical = `${SITE_URL}/technical-due-diligence-bess/`;
+---
+
+<Layout title={title} description={description} page="technicalDueDiligenceBess" canonical={canonical}>
+  <main>
+    <SupportPageShell
+      eyebrow="BESS due diligence"
+      title="Technical Due Diligence for Utility-Scale BESS Projects"
+      intro="BiP Omega supports capital allocation and diligence prioritization by translating public-record technical evidence into decision-ready BESS risk conclusions. The objective is not generic engineering commentary; it is a defensible technical gate for whether a project deserves deeper diligence spend."
+      primaryKeyword="technical due diligence BESS"
+    />
+
+    <section class="py-16 bg-white">
+      <div class="section-container max-w-4xl grid gap-12 lg:grid-cols-2">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">What this page is targeting</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            This page is designed to rank for commercial-intent searches around <strong>technical due diligence for BESS</strong>, especially where the buyer needs an early technical gate before committing to expensive data-room review, site visits, or full independent engineering scope.
+          </p>
+          <ul class="space-y-3 text-slate-700">
+            <li>• Utility-scale battery energy storage systems (BESS)</li>
+            <li>• Investment committee and lender-oriented technical review</li>
+            <li>• Public-record evidence classification and gap detection</li>
+            <li>• Explicit separation between verified evidence, assumptions, and critical silences</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">Decision outputs buyers expect</h2>
+          <div class="bg-slate-50 border border-slate-200 rounded-sm p-6 space-y-3 text-slate-700">
+            <p>✓ Clear statement of what is known vs. assumed</p>
+            <p>✓ Technical findings tied to schedule, capex, insurability, and operability</p>
+            <p>✓ Evidence register that can survive IC and lender scrutiny</p>
+            <p>✓ Escalation path into focused deeper diligence only where justified</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-slate-900 text-white">
+      <div class="section-container max-w-4xl">
+        <h2 class="text-2xl font-bold mb-6">How BiP Omega frames BESS due diligence</h2>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="border border-slate-700 rounded-sm p-6">
+            <h3 class="font-semibold mb-3">1. Evidence-grade intake</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Public filings, interconnection studies, permitting disclosures, climate exposure, and infrastructure constraints are mapped into a traceable evidence register.</p>
+          </div>
+          <div class="border border-slate-700 rounded-sm p-6">
+            <h3 class="font-semibold mb-3">2. Critical silence detection</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Absences that alter risk—thermal derating curves, bridge logistics, fire propagation evidence, federal permitting path—are called out explicitly.</p>
+          </div>
+          <div class="border border-slate-700 rounded-sm p-6">
+            <h3 class="font-semibold mb-3">3. Decision gating</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">The end product is a technical recommendation for whether deeper diligence should proceed, pause, or be re-scoped.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="section-container max-w-4xl">
+        <h2 class="text-2xl font-bold text-slate-900 mb-6">Related technical resources</h2>
+        <div class="grid gap-4 md:grid-cols-2">
+          <a href="/independent-engineer-bess/" class="border border-slate-200 rounded-sm p-5 hover:border-slate-400 transition-colors">
+            <h3 class="font-semibold text-slate-900 mb-2">Independent Engineer BESS</h3>
+            <p class="text-sm text-slate-600">Positioning for buyers comparing BiP Omega against traditional IE workflows.</p>
+          </a>
+          <a href="/forensic-case-study/" class="border border-slate-200 rounded-sm p-5 hover:border-slate-400 transition-colors">
+            <h3 class="font-semibold text-slate-900 mb-2">Forensic Case Study</h3>
+            <p class="text-sm text-slate-600">A dedicated entry point for report-format and evidence-structure queries.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

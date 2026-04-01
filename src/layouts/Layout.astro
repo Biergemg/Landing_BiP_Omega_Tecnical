@@ -5,49 +5,51 @@ import Analytics from '../components/partials/Analytics.astro';
 import DynamicSEO from '../components/partials/DynamicSEO.astro';
 
 interface Props {
-	title: string;
-	description?: string;
-	page?: string;
-	noIndex?: boolean;
+  title: string;
+  description?: string;
+  page?: string;
+  noIndex?: boolean;
+  canonical?: string;
 }
 
-const { title, description = "Independent technical diagnostic, risk gating and pre-investment analysis for energy infrastructure and BESS projects.", page = 'home', noIndex = false } = Astro.props;
+const {
+  title,
+  description = 'Independent technical diagnostic, risk gating and pre-investment analysis for energy infrastructure and BESS projects.',
+  page = 'home',
+  noIndex = false,
+  canonical
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        <Analytics />
-        <DynamicSEO 
-          page={page} 
-          title={title} 
-          description={description} 
-          noIndex={noIndex} 
-        />
-        
-		<!-- Favicon - Multiple formats for best compatibility -->
-		<link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
-		<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v=2" />
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
-		<link rel="manifest" href="/site.webmanifest" />
-		<meta name="theme-color" content="#0f172a" />
-		
-		<!-- Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!-- Generator -->
-		<meta name="generator" content={Astro.generator} />
-		
+    <Analytics />
+    <DynamicSEO
+      page={page}
+      title={title}
+      description={description}
+      noIndex={noIndex}
+      canonical={canonical}
+    />
 
-	</head>
-	<body class="bg-white min-h-screen flex flex-col">
-		<slot />
-	</body>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v=2" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body class="bg-white min-h-screen flex flex-col">
+    <slot />
+  </body>
 </html>

@@ -4,26 +4,29 @@ const year = new Date().getFullYear();
 
 <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
   <div class="section-container">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+    <div class="grid gap-8 md:grid-cols-[1.2fr_1fr_1fr] items-start">
       <div class="text-center md:text-left">
         <h3 class="text-xl font-bold text-white mb-2">BiP Omega</h3>
         <p class="text-sm max-w-sm text-slate-500">
-          Independent Technical Diagnostic & Risk Assurance.<br/>
+          Independent Technical Diagnostic & Risk Assurance.<br />
           <span class="text-slate-600">Independent practice.</span>
         </p>
       </div>
-      
+
+      <div class="text-center md:text-left">
+        <p class="text-xs uppercase tracking-widest text-slate-500 mb-3">Technical resources</p>
+        <div class="flex flex-col gap-2">
+          <a href="/technical-due-diligence-bess/" class="text-sm text-slate-400 hover:text-white transition-colors">Technical Due Diligence for BESS</a>
+          <a href="/independent-engineer-bess/" class="text-sm text-slate-400 hover:text-white transition-colors">Independent Engineer BESS</a>
+          <a href="/forensic-case-study/" class="text-sm text-slate-400 hover:text-white transition-colors">Forensic Case Study</a>
+        </div>
+      </div>
+
       <div class="text-center md:text-right">
-        <p class="text-sm text-slate-600">
-          © {year} BiP Omega. All rights reserved.
-        </p>
+        <p class="text-sm text-slate-600">© {year} BiP Omega. All rights reserved.</p>
         <div class="flex gap-4 mt-2 justify-center md:justify-end">
-          <a href="/privacy" class="text-sm text-slate-500 hover:text-white transition-colors">
-            Privacy Policy
-          </a>
-          <a href="/terms" class="text-sm text-slate-500 hover:text-white transition-colors">
-            Terms of Service
-          </a>
+          <a href="/privacy" class="text-sm text-slate-500 hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/terms" class="text-sm text-slate-500 hover:text-white transition-colors">Terms of Service</a>
         </div>
       </div>
     </div>

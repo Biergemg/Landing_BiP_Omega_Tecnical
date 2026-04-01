@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Footer from '../../components/partials/Footer.astro';
+import SupportPageShell from '../../components/seo/SupportPageShell.astro';
+import { SITE_URL } from '../../lib/site/config';
+
+const title = 'Independent Engineer for BESS vs Early Technical Gate | BiP Omega';
+const description = 'Independent engineer BESS positioning page for lenders and investors comparing full IE scope against an earlier technical gate based on public-record evidence and critical silence detection.';
+const canonical = `${SITE_URL}/independent-engineer-bess/`;
+---
+
+<Layout title={title} description={description} page="independentEngineerBess" canonical={canonical}>
+  <main>
+    <SupportPageShell
+      eyebrow="Independent engineer BESS"
+      title="Independent Engineer for BESS: What Buyers Need Before Full IE Scope"
+      intro="A traditional independent engineer engagement is valuable—but it is often commissioned after significant diligence budget has already been committed. BiP Omega is positioned earlier in the funnel: a technical gate that helps determine whether a project deserves full IE attention at all."
+      primaryKeyword="independent engineer BESS"
+    />
+
+    <section class="py-16 bg-white">
+      <div class="section-container max-w-4xl overflow-x-auto">
+        <h2 class="text-2xl font-bold text-slate-900 mb-6">BiP Omega vs. traditional IE scope</h2>
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-slate-200 text-slate-900">
+              <th class="py-3 pr-4 font-semibold">Question</th>
+              <th class="py-3 pr-4 font-semibold">BiP Omega early gate</th>
+              <th class="py-3 font-semibold">Traditional IE process</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-600 align-top">
+            <tr class="border-b border-slate-100">
+              <td class="py-4 pr-4">When does it help?</td>
+              <td class="py-4 pr-4">Before NDA / full diligence spend</td>
+              <td class="py-4">During formal diligence and validation</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="py-4 pr-4">Primary evidence base</td>
+              <td class="py-4 pr-4">Public records + traceable technical inference</td>
+              <td class="py-4">Data room, interviews, site access, supplied documents</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="py-4 pr-4">Main buyer question</td>
+              <td class="py-4 pr-4">Should this project move forward to deeper diligence?</td>
+              <td class="py-4">Does the project validate under detailed engineering review?</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4">Main risk captured</td>
+              <td class="py-4 pr-4">Critical omissions that distort economics or insurability</td>
+              <td class="py-4">Compliance and design validation within defined scope</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="py-16 bg-slate-50">
+      <div class="section-container max-w-4xl grid gap-8 lg:grid-cols-2">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">When this page matters</h2>
+          <p class="text-slate-600 leading-relaxed">This page exists to capture commercial traffic from stakeholders searching for an <strong>independent engineer for BESS</strong> while educating them on the difference between a bankability-oriented validation exercise and an earlier technical triage or gating exercise.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-sm p-6">
+          <h3 class="font-semibold text-slate-900 mb-3">Best-fit buyers</h3>
+          <ul class="space-y-2 text-slate-700 text-sm">
+            <li>• Investors screening multiple BESS opportunities</li>
+            <li>• Lenders deciding where to deploy diligence budget</li>
+            <li>• Risk-sensitive parties needing a public-record pre-check</li>
+            <li>• Teams wanting sharper scope before mandating a tier-1 IE</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="section-container max-w-4xl">
+        <h2 class="text-2xl font-bold text-slate-900 mb-6">Related technical resources</h2>
+        <div class="grid gap-4 md:grid-cols-2">
+          <a href="/technical-due-diligence-bess/" class="border border-slate-200 rounded-sm p-5 hover:border-slate-400 transition-colors">
+            <h3 class="font-semibold text-slate-900 mb-2">Technical Due Diligence for BESS</h3>
+            <p class="text-sm text-slate-600">Commercial landing for buyers searching due diligence terms directly.</p>
+          </a>
+          <a href="/forensic-case-study/" class="border border-slate-200 rounded-sm p-5 hover:border-slate-400 transition-colors">
+            <h3 class="font-semibold text-slate-900 mb-2">Forensic Case Study</h3>
+            <p class="text-sm text-slate-600">Reference artifact showing evidence classification and decision outputs.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

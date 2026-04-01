@@ -1,0 +1,18 @@
+Google Search Console setup for bipomega.com
+
+1. Verify the domain or URL-prefix property in Google Search Console.
+2. Add the verification token to the deployment environment as:
+   PUBLIC_GOOGLE_SITE_VERIFICATION=your-real-token
+3. Rebuild and deploy the site.
+4. Submit https://bipomega.com/sitemap-index.xml in Search Console.
+5. Request indexing for:
+   - /
+   - /technical-due-diligence-bess/
+   - /independent-engineer-bess/
+   - /forensic-case-study/
+
+Optional webmaster env vars also supported:
+- PUBLIC_BING_SITE_VERIFICATION
+- PUBLIC_YANDEX_SITE_VERIFICATION
+- PUBLIC_ALEXA_SITE_VERIFICATION
+- PUBLIC_GA4_MEASUREMENT_ID

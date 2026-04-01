@@ -2,5 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://bipomega.com/sitemap-index.xml
-
-
