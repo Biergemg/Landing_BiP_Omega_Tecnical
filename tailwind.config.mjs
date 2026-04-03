@@ -9,10 +9,6 @@ export default {
                     DEFAULT: 'var(--color-primary)',
                     light: 'var(--color-primary-light)',
                 },
-                secondary: {
-                    DEFAULT: 'var(--color-secondary)',
-                    dark: 'var(--color-secondary-dark)',
-                },
                 text: {
                     body: 'var(--color-text-body)',
                     heading: 'var(--color-text-heading)',
@@ -42,6 +38,7 @@ export default {
             },
             fontFamily: {
                 sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                serif: ['"Source Serif 4"', 'Georgia', 'ui-serif', 'serif'],
             },
             container: {
                 center: true,

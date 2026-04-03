@@ -6,13 +6,39 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    @apply text-slate-800 antialiased;
+    @apply text-slate-700 antialiased;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    line-height: 1.65;
+    font-optical-sizing: auto;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-sans tracking-tight text-slate-900;
+  /* Display headings: serif for institutional authority */
+  h1, h2 {
+    @apply font-serif font-semibold text-slate-900;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    text-wrap: balance;
+    font-optical-sizing: auto;
+  }
+
+  /* UI headings: sans-serif for clarity and structure */
+  h3, h4, h5, h6 {
+    @apply font-sans font-semibold tracking-tight text-slate-900;
+    text-wrap: balance;
+  }
+
+  /* Branded selection color */
+  ::selection {
+    background-color: #0f172a;
+    color: #f8fafc;
+  }
+
+  /* Prose constraint — applied where text blocks need line-length control */
+  .prose-constrained {
+    max-width: 65ch;
+    line-height: 1.7;
   }
 }
 
