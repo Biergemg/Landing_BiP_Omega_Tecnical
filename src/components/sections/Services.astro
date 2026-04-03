@@ -7,49 +7,53 @@ const { id = "services" } = Astro.props;
 
 <section id={id} class="bg-slate-900 text-white py-12 lg:py-24" data-analytics-id="pricing">
   <div class="section-container">
+    <div class="max-w-5xl mx-auto mb-12">
+      <h2 class="text-3xl font-bold text-white mb-4">What we deliver</h2>
+      <p class="text-slate-400 text-lg">One mandate. One complete technical answer. Adapted to what you actually need.</p>
+    </div>
     <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
       <!-- Investment Screening -->
       <div class="bg-slate-800 p-8 rounded-sm border border-slate-700 hover:border-slate-500 transition-colors">
-        <div class="text-slate-400 text-sm font-bold uppercase tracking-wider mb-4">Investment Screening</div>
-        <h3 class="text-2xl font-bold mb-4 text-white">Pre-Diligence Technical Gate</h3>
+        <div class="text-slate-400 text-sm font-bold uppercase tracking-wider mb-4">Pre-Diligence</div>
+        <h3 class="text-2xl font-bold mb-4 text-white">A clear GO / NO-GO before you spend on diligence</h3>
         <p class="text-slate-300 mb-6 leading-relaxed">
-          Identify material gaps, execution risk, and documentary silences before committing diligence budget.
+          Know which projects are worth pursuing before committing technical budget. We surface execution gaps, permit exposure, safety concerns, and contractual risk — with explicit confidence on every finding.
         </p>
         <ul class="space-y-3 text-slate-300 text-sm">
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
-            GO / CONDITIONAL NO-GO / NO-GO gate
+            GO / CONDITIONAL NO-GO / NO-GO decision with documented rationale
           </li>
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
-            Evidence-Grade Register
+            Full register of confirmed, unverified, and missing information
           </li>
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
-            Critical Silence detection across technical, contractual, regulatory, and safety dimensions
+            Material gaps identified across technical, contractual, regulatory, and safety dimensions
           </li>
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
-            Clarification scope for deeper review
+            Scoped question list for deeper review if warranted
           </li>
         </ul>
       </div>
 
       <!-- Lender's Technical Review -->
       <div class="bg-slate-800 p-8 rounded-sm border border-slate-700 hover:border-slate-500 transition-colors">
-        <div class="text-slate-400 text-sm font-bold uppercase tracking-wider mb-4">Lender's Technical Review</div>
-        <h3 class="text-2xl font-bold mb-4 text-white">Lender's Technical Due Diligence</h3>
+        <div class="text-slate-400 text-sm font-bold uppercase tracking-wider mb-4">Lender's Review</div>
+        <h3 class="text-2xl font-bold mb-4 text-white">A bankability position your credit committee can defend</h3>
         <p class="text-slate-300 mb-6 leading-relaxed">
-          Structured technical assessment for debt providers. Bankability analysis, risk register, and compliance-to-scope matrix adapted to lender requirements.
+          Structured technical due diligence built for debt providers. We deliver a bankability assessment, full risk register, and compliance-to-scope matrix — with every gap formally logged, not buried.
         </p>
         <ul class="space-y-3 text-slate-300 text-sm">
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
-            Bankability Index and confidence statement
+            Bankability assessment with explicit confidence statement
           </li>
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
-            Risk register by dimension
+            Risk register by dimension — regulatory, operational, safety, commercial
           </li>
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
@@ -57,22 +61,22 @@ const { id = "services" } = Astro.props;
           </li>
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
-            Formal clarification log (RFI register)
+            Formal clarification log for outstanding items
           </li>
         </ul>
       </div>
 
       <!-- Acquisition & Portfolio DD -->
       <div class="bg-slate-800 p-8 rounded-sm border border-slate-700 hover:border-slate-500 transition-colors">
-        <div class="text-slate-400 text-sm font-bold uppercase tracking-wider mb-4">Acquisition & Portfolio DD</div>
-        <h3 class="text-2xl font-bold mb-4 text-white">Technical Due Diligence for Transactions</h3>
+        <div class="text-slate-400 text-sm font-bold uppercase tracking-wider mb-4">Acquisition & Portfolio</div>
+        <h3 class="text-2xl font-bold mb-4 text-white">A risk map for every asset in the transaction</h3>
         <p class="text-slate-300 mb-6 leading-relaxed">
-          Technical due diligence for fund acquisitions and portfolio transactions. Systematic multi-asset risk assessment under deal timelines.
+          Full technical due diligence for fund acquisitions and portfolio transactions — under deal timelines. Asset-level and portfolio-level risk, documented and defensible.
         </p>
         <ul class="space-y-3 text-slate-300 text-sm">
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
-            Asset-level and portfolio-level risk scoring
+            Risk profile per asset and across the portfolio
           </li>
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
@@ -80,30 +84,30 @@ const { id = "services" } = Astro.props;
           </li>
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
-            Safety and thermal management audit
+            Safety and thermal management review
           </li>
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
-            Vendor DD report for transaction support
+            Technical report for transaction support
           </li>
         </ul>
       </div>
 
       <!-- Independent Technical Assessment -->
       <div class="bg-slate-800 p-8 rounded-sm border border-slate-700 hover:border-slate-500 transition-colors">
-        <div class="text-slate-400 text-sm font-bold uppercase tracking-wider mb-4">Independent Technical Assessment</div>
-        <h3 class="text-2xl font-bold mb-4 text-white">Objective Technical Opinion</h3>
+        <div class="text-slate-400 text-sm font-bold uppercase tracking-wider mb-4">Independent Assessment</div>
+        <h3 class="text-2xl font-bold mb-4 text-white">A technical opinion that holds under scrutiny</h3>
         <p class="text-slate-300 mb-6 leading-relaxed">
-          Objective technical opinion for advisors, committees, and evaluators. Traceable findings with explicit confidence statements — designed to be defended.
+          Objective technical position for advisors, committees, and evaluators. Every finding tied to evidence. Every confidence level stated. Every outstanding item logged. Built to be challenged.
         </p>
         <ul class="space-y-3 text-slate-300 text-sm">
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
-            Multi-dimensional technical scoring
+            Technical scoring across six risk dimensions
           </li>
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
-            Documented decision rationale
+            Documented decision rationale — traceable from evidence to conclusion
           </li>
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
@@ -111,7 +115,7 @@ const { id = "services" } = Astro.props;
           </li>
           <li class="flex gap-3">
             <span class="text-blue-400">→</span>
-            Mandate-specific deliverable format
+            Format adapted to your mandate
           </li>
         </ul>
       </div>
@@ -120,7 +124,7 @@ const { id = "services" } = Astro.props;
     <!-- Core note -->
     <div class="max-w-5xl mx-auto mt-8 px-4">
       <p class="text-slate-400 text-sm text-center border-t border-slate-700 pt-8">
-        Every mandate uses the same analytical core: structured evidence ingestion, explicit confidence classification, and traceable decision logic. What adapts is the scope, the required sources, and the deliverable format.
+        Every mandate produces the same thing: a complete, documented technical position — with explicit confidence on every finding. What adapts is the scope, the sources, and the format your audience needs.
       </p>
     </div>
   </div>
