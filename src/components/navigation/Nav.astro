@@ -1,12 +1,13 @@
 ---
-// Basic navigation component for testing
+import { Image } from 'astro:assets';
+import logoImage from '../../assets/logo.png';
 ---
 
 <nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-container">
     <div class="nav-brand">
       <a href="/" class="brand-link">
-        <span class="brand-text">BiP Omega</span>
+        <Image src={logoImage} alt="BiP Omega" class="h-9 w-auto" />
       </a>
     </div>
     
@@ -62,14 +63,14 @@
   }
   
   .nav-brand {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #1d4ed8;
+    display: flex;
+    align-items: center;
   }
-  
+
   .brand-link {
     text-decoration: none;
-    color: inherit;
+    display: inline-flex;
+    align-items: center;
   }
   
   .nav-menu {
@@ -94,11 +95,11 @@
   }
   
   .nav-link:hover {
-    color: #1d4ed8;
+    color: #0f172a;
   }
-  
+
   .nav-link[aria-current="page"] {
-    color: #1d4ed8;
+    color: #0f172a;
     font-weight: 600;
   }
   
