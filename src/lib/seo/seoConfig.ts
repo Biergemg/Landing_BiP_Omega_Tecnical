@@ -33,8 +33,8 @@ const baseOrganization = {
 
 export const seoConfig: PageSEO = {
   home: {
-    title: 'BiP Omega – Technical Due Diligence for Utility-Scale BESS | Gustavo Bierge',
-    description: 'Structured technical due diligence for utility-scale BESS projects. Mandate-adaptive analysis for investment committees, lenders, and independent engineers. Every conclusion traceable.',
+    title: 'BiP Omega — Pre-Investment Technical Screening for Utility-Scale BESS',
+    description: 'Documented GO / CONDITIONAL NO-GO / NO-GO technical positions for utility-scale BESS projects, with every finding tied to evidence and every material gap formally logged.',
     keywords: [
       'technical due diligence',
       'technical due diligence BESS',
@@ -45,7 +45,7 @@ export const seoConfig: PageSEO = {
     ],
     canonical: `${SITE_URL}/`,
     ogImage: DEFAULT_OG_IMAGE,
-    ogImageAlt: 'BiP Omega - Technical Due Diligence for Utility-Scale BESS'
+    ogImageAlt: 'BiP Omega — Pre-Investment Technical Screening for Utility-Scale BESS'
   },
   technicalDueDiligenceBess: {
     title: 'Technical Due Diligence for BESS Projects | BiP Omega',
